@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     // langkah 1, inisialisasi
@@ -51,8 +53,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val card7 : CardView = findViewById(R.id.card7)
-        card7.setOnClickListener {
+        tvtanggal = findViewById(R.id.tvtanggal)
+        tvtanggal.text = getCurrentDate()
+
+        tvsapa = findViewById(R.id.tvsapa)
+        tvsapa.text = getGreetingMessage()
+
+        val card2 : CardView = findViewById(R.id.card2)
+        card2.setOnClickListener {
             // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, AkunActivity::class.java)
             startActivity(intent)
@@ -97,5 +105,21 @@ class MainActivity : AppCompatActivity() {
         tvcard5 = findViewById(R.id.tvcard5)
         tvcard6 = findViewById(R.id.tvcard6)
         tvcard7 = findViewById(R.id.tvcard7)
+    }
+    private fun getGreetingMessage(): String {
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+
+        return when(hour){
+            in 5..11 -> "Selamat Pagi, Kristevi"
+            in 12..14 -> "Selamat Siang, Kristevi"
+            in 15..17 -> "Selamat Sore, Kristevi"
+            else -> "Selamat Malam, Kristevi"
+        }
+    }
+
+    private fun getCurrentDate(): String {
+        val dateFormat = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
+        return dateFormat.format(Date())
     }
 }
