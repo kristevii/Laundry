@@ -4,18 +4,25 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cabang.DataCabangActivity
+import pegawai.DataPegawaiActivity
+import pelanggan.DataPelangganActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
     // langkah 1, inisialisasi
     lateinit var card1 : CardView
+    lateinit var transaksi : LinearLayout
+    lateinit var pelanggan : LinearLayout
+    lateinit var laporan : LinearLayout
     lateinit var card2 : CardView
     lateinit var card3 : CardView
     lateinit var card4 : CardView
@@ -59,10 +66,28 @@ class MainActivity : AppCompatActivity() {
         tvsapa = findViewById(R.id.tvsapa)
         tvsapa.text = getGreetingMessage()
 
+        val pelanggan : LinearLayout = findViewById(R.id.pelanggan)
+        pelanggan.setOnClickListener {
+            // membuat  intent untuk memulai activity kedua
+            val intent = Intent(this, DataPelangganActivity::class.java)
+            startActivity(intent)
+        }
         val card2 : CardView = findViewById(R.id.card2)
         card2.setOnClickListener {
             // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, AkunActivity::class.java)
+            startActivity(intent)
+        }
+        val card5 : CardView = findViewById(R.id.card5)
+        card5.setOnClickListener {
+            // membuat  intent untuk memulai activity kedua
+            val intent = Intent(this, DataPegawaiActivity::class.java)
+            startActivity(intent)
+        }
+        val card6 : CardView = findViewById(R.id.card6)
+        card6.setOnClickListener {
+            // membuat  intent untuk memulai activity kedua
+            val intent = Intent(this, DataCabangActivity::class.java)
             startActivity(intent)
         }
 
@@ -74,6 +99,9 @@ class MainActivity : AppCompatActivity() {
     }
     fun init() {
         card1 = findViewById(R.id.card1)
+        transaksi = findViewById(R.id.transaksi)
+        pelanggan = findViewById(R.id.pelanggan)
+        laporan = findViewById(R.id.laporan)
         card2 = findViewById(R.id.card2)
         card3 = findViewById(R.id.card3)
         card4 = findViewById(R.id.card4)

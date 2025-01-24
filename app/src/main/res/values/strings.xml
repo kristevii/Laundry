@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Laundry</string>
+    <string-array name="jeniskelamin">
+        <item>Perempuan</item>
+        <item>Laki-Laki</item>
+    </string-array>
 </resources>
