@@ -1,29 +1,28 @@
-package pegawai
+package layanan
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import cabang.TambahCabangActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.kristevi.laundry.AkunActivity
 import com.kristevi.laundry.R
 
-class DataPegawaiActivity : AppCompatActivity() {
-    lateinit var rvDataPegawai : RecyclerView
-    lateinit var fabTambahPegawai : FloatingActionButton
+class DataLayananActivity : AppCompatActivity() {
+    lateinit var rvDataLayanan : RecyclerView
+    lateinit var fabTambahLayanan : FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_data_pegawai)
+        setContentView(R.layout.activity_data_layanan)
 
-        val fabTambahPegawai : FloatingActionButton = findViewById(R.id.fabTambahPegawai)
-        fabTambahPegawai.setOnClickListener {
-            val intent = Intent(this, TambahPegawaiActivity::class.java)
+        val fabTambahLayanan : FloatingActionButton = findViewById(R.id.fabTambahLayanan)
+        fabTambahLayanan.setOnClickListener {
+            val intent = Intent(this, TambahCabangActivity::class.java)
             startActivity(intent)
         }
 
@@ -32,8 +31,8 @@ class DataPegawaiActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        fun init() {
-            rvDataPegawai = findViewById(R.id.rvDataPegawai)
+        fun init(){
+            rvDataLayanan = findViewById(R.id.rvDataLayanan)
         }
     }
 }

@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import cabang.DataCabangActivity
+import layanan.DataLayananActivity
 import pegawai.DataPegawaiActivity
 import pelanggan.DataPelangganActivity
 import java.text.SimpleDateFormat
@@ -31,8 +32,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var card7 : CardView
     lateinit var tvsapa: TextView
     lateinit var tvtanggal : TextView
-    lateinit var tvestimasi: TextView
-    lateinit var tvjmlestimasi : TextView
+    lateinit var estimasi: TextView
+    lateinit var jmlestimasi : TextView
     lateinit var garis : View
     lateinit var tvimg1 : TextView
     lateinit var tvimg2: TextView
@@ -78,6 +79,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AkunActivity::class.java)
             startActivity(intent)
         }
+        val card3 : CardView = findViewById(R.id.card3)
+        card3.setOnClickListener {
+            // membuat  intent untuk memulai activity kedua
+            val intent = Intent(this, DataLayananActivity::class.java)
+            startActivity(intent)
+        }
         val card5 : CardView = findViewById(R.id.card5)
         card5.setOnClickListener {
             // membuat  intent untuk memulai activity kedua
@@ -108,10 +115,10 @@ class MainActivity : AppCompatActivity() {
         card5 = findViewById(R.id.card5)
         card6 = findViewById(R.id.card6)
         card7 = findViewById(R.id.card7)
-        tvsapa = findViewById(R.id.img1)
-        tvtanggal  = findViewById(R.id.img1)
-        tvestimasi = findViewById(R.id.img1)
-        tvjmlestimasi = findViewById(R.id.img1)
+        tvsapa = findViewById(R.id.tvsapa)
+        tvtanggal  = findViewById(R.id.tvtanggal)
+        estimasi = findViewById(R.id.estimasi)
+        jmlestimasi = findViewById(R.id.jmlestimasi)
         garis = findViewById(R.id.garis)
         tvimg1 = findViewById(R.id.tvimg1)
         tvimg2 = findViewById(R.id.tvimg2)
