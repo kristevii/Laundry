@@ -31,7 +31,6 @@ class DataTambahanActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         fun init(){
             rvDataTambahan = findViewById(R.id.rvDataTambahan)
         }
