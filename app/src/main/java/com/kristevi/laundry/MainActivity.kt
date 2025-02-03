@@ -15,6 +15,7 @@ import cabang.DataCabangActivity
 import layanan.DataLayananActivity
 import pegawai.DataPegawaiActivity
 import pelanggan.DataPelangganActivity
+import tambahan.DataTambahanActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -83,6 +84,12 @@ class MainActivity : AppCompatActivity() {
         card3.setOnClickListener {
             // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataLayananActivity::class.java)
+            startActivity(intent)
+        }
+        val card4 : CardView = findViewById(R.id.card4)
+        card4.setOnClickListener {
+            // membuat  intent untuk memulai activity kedua
+            val intent = Intent(this, DataTambahanActivity::class.java)
             startActivity(intent)
         }
         val card5 : CardView = findViewById(R.id.card5)

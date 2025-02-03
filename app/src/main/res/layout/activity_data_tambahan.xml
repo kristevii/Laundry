@@ -6,24 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="15dp"
-    tools:context="layanan.DataLayananActivity">
+    tools:context="tambahan.DataTambahanActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDataLayanan"
+        android:id="@+id/rvDataTambahan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/card_data_layanan">
+        tools:listitem="@layout/card_data_tambahan">
 
     </androidx.recyclerview.widget.RecyclerView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabTambahLayanan"
+            android:id="@+id/fabTambahTambahan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_add_24"
-            android:contentDescription="Tambah Layanan"
+            android:contentDescription="Tambah Tambahan"
             android:backgroundTint="#3272BF"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"

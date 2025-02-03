@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
+            android:name=".card_data_tambahan"
+            android:exported="false" />
+        <activity
+            android:name="tambahan.TambahTambahanActivity"
+            android:exported="false" />
+        <activity
+            android:name="tambahan.DataTambahanActivity"
+            android:exported="false" />
+        <activity
             android:name="layanan.TambahLayananActivity"
             android:exported="false" />
         <activity

@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_add_24"
             android:contentDescription="Tambah Pengguna"
+            android:backgroundTint="#3272BF"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="16dp"
