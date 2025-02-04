@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import cabang.DataCabangActivity
+import laporan.LaporanActivity
 import layanan.DataLayananActivity
 import pegawai.DataPegawaiActivity
 import pelanggan.DataPelangganActivity
@@ -72,6 +73,12 @@ class MainActivity : AppCompatActivity() {
         pelanggan.setOnClickListener {
             // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataPelangganActivity::class.java)
+            startActivity(intent)
+        }
+        val laporan : LinearLayout = findViewById(R.id.laporan)
+        laporan.setOnClickListener {
+            // membuat  intent untuk memulai activity kedua
+            val intent = Intent(this, LaporanActivity::class.java)
             startActivity(intent)
         }
         val card2 : CardView = findViewById(R.id.card2)

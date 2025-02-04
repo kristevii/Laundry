@@ -4,4 +4,8 @@
         <item>Perempuan</item>
         <item>Laki-Laki</item>
     </string-array>
+    <string-array name="satuan">
+        <item>Kilogram (Kg)</item>
+        <item>Pieces (Pcs)</item>
+    </string-array>
 </resources>
