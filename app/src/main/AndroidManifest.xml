@@ -61,7 +61,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".AkunActivity"
+            android:name=".akun.AkunActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
