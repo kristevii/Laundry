@@ -17,6 +17,7 @@ import com.kristevi.laundry.laporan.LaporanActivity
 import com.kristevi.laundry.layanan.DataLayananActivity
 import com.kristevi.laundry.pegawai.DataPegawaiActivity
 import com.kristevi.laundry.pelanggan.DataPelangganActivity
+import com.kristevi.laundry.printer.PrinterActivity
 import com.kristevi.laundry.tambahan.DataTambahanActivity
 import com.kristevi.laundry.transaksi.TransaksiActivity
 import java.text.SimpleDateFormat
@@ -109,6 +110,11 @@ class MainActivity : AppCompatActivity() {
         val card6 : CardView = findViewById(R.id.card6)
         card6.setOnClickListener {
             val intent = Intent(this, DataCabangActivity::class.java)
+            startActivity(intent)
+        }
+        val card7 : CardView = findViewById(R.id.card7)
+        card7.setOnClickListener {
+            val intent = Intent(this, PrinterActivity::class.java)
             startActivity(intent)
         }
 

@@ -4,7 +4,7 @@
     android:id="@+id/cardpembayaran"
     android:layout_width="250dp"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="20dp"
     android:layout_margin="5dp"
     android:layout_marginTop="5dp">
     <LinearLayout
@@ -65,15 +65,27 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/qris"/>
-            <TextView
-                android:id="@+id/tvbayar2"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="QRIS"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginTop="7dp"
-                android:layout_marginStart="10dp"/>
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvbayar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QRIS"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(GoPay, DANA, OVO, LinkAja, BCA, dll)"
+                    android:textSize="9sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
         </LinearLayout>
         <View
             android:id="@+id/garis2"

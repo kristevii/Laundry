@@ -74,7 +74,7 @@
     <Button
         android:id="@+id/btbatal"
         android:layout_width="140dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:text="Batal"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -88,7 +88,7 @@
     <Button
         android:id="@+id/btpilihbayar"
         android:layout_width="220dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:text="Pilih Pembayaran"
         android:textSize="20sp"
         android:textStyle="bold"
