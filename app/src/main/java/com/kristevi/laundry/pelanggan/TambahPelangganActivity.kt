@@ -18,6 +18,8 @@ class TambahPelangganActivity : AppCompatActivity() {
     lateinit var etAlamataddpelanggan : EditText
     lateinit var tvNoHpaddpelanggan : TextView
     lateinit var etNoHpaddpelanggan : EditText
+    lateinit var tvCabangaddpelanggan : TextView
+    lateinit var etCabangaddpelanggan : EditText
     lateinit var buttonaddpelanggan : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +41,8 @@ class TambahPelangganActivity : AppCompatActivity() {
         etNoHpaddpelanggan = findViewById(R.id.etNoHpaddpelanggan)
         tvalamataddpelanggan = findViewById(R.id.tvalamataddpelanggan)
         etAlamataddpelanggan = findViewById(R.id.etAlamataddpelanggan)
+        tvCabangaddpelanggan = findViewById(R.id.tvCabangaddpelanggan)
+        etCabangaddpelanggan = findViewById(R.id.etCabangaddpelanggan)
         buttonaddpelanggan = findViewById(R.id.buttonaddpelanggan)
     }
 }

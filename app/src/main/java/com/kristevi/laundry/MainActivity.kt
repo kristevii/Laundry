@@ -18,6 +18,7 @@ import com.kristevi.laundry.layanan.DataLayananActivity
 import com.kristevi.laundry.pegawai.DataPegawaiActivity
 import com.kristevi.laundry.pelanggan.DataPelangganActivity
 import com.kristevi.laundry.tambahan.DataTambahanActivity
+import com.kristevi.laundry.transaksi.TransaksiActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -70,45 +71,43 @@ class MainActivity : AppCompatActivity() {
         tvsapa = findViewById(R.id.tvsapa)
         tvsapa.text = getGreetingMessage()
 
+        val transaksi : LinearLayout = findViewById(R.id.transaksi)
+        transaksi.setOnClickListener {
+            val intent = Intent(this, TransaksiActivity::class.java)
+            startActivity(intent)
+        }
         val pelanggan : LinearLayout = findViewById(R.id.pelanggan)
         pelanggan.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataPelangganActivity::class.java)
             startActivity(intent)
         }
         val laporan : LinearLayout = findViewById(R.id.laporan)
         laporan.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, LaporanActivity::class.java)
             startActivity(intent)
         }
         val card2 : CardView = findViewById(R.id.card2)
         card2.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, AkunActivity::class.java)
             startActivity(intent)
         }
         val card3 : CardView = findViewById(R.id.card3)
         card3.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataLayananActivity::class.java)
             startActivity(intent)
         }
         val card4 : CardView = findViewById(R.id.card4)
         card4.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataTambahanActivity::class.java)
             startActivity(intent)
         }
         val card5 : CardView = findViewById(R.id.card5)
         card5.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataPegawaiActivity::class.java)
             startActivity(intent)
         }
         val card6 : CardView = findViewById(R.id.card6)
         card6.setOnClickListener {
-            // membuat  intent untuk memulai activity kedua
             val intent = Intent(this, DataCabangActivity::class.java)
             startActivity(intent)
         }

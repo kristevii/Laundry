@@ -34,7 +34,7 @@
                 android:id="@+id/imgbayar1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/laporan_penjualan"/>
+                android:src="@drawable/tunai"/>
             <TextView
                 android:id="@+id/tvbayar1"
                 android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                 android:id="@+id/imgbayar2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/laporan_penjualan"/>
+                android:src="@drawable/qris"/>
             <TextView
                 android:id="@+id/tvbayar2"
                 android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
                 android:id="@+id/imgbayar3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/laporan_penjualan"/>
+                android:src="@drawable/transfer"/>
             <TextView
                 android:id="@+id/tvbayar3"
                 android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
                 android:id="@+id/imgbayar4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/laporan_penjualan"/>
+                android:src="@drawable/debit"/>
             <TextView
                 android:id="@+id/tvbayar4"
                 android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
                 android:id="@+id/imgbayar5"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/laporan_penjualan"/>
+                android:src="@drawable/credit2"/>
             <TextView
                 android:id="@+id/tvbayar5"
                 android:layout_width="wrap_content"

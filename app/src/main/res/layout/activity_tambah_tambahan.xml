@@ -12,7 +12,7 @@
         android:id="@+id/tvjudul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tambahan"
+        android:text="Tambah Layanan\nTambahan"
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAlignment="center"

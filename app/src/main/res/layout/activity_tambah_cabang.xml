@@ -9,7 +9,7 @@
     tools:context=".cabang.TambahCabangActivity">
 
     <TextView
-        android:id="@+id/tvjudul"
+        android:id="@+id/tvjuduladdcabang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tambah Cabang"
@@ -20,21 +20,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvcabang"/>
+        app:layout_constraintBottom_toTopOf="@+id/tvaddcabang"/>
     <TextView
-        android:id="@+id/tvcabang"
+        android:id="@+id/tvaddcabang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama Cabang"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvjudul"
+        app:layout_constraintTop_toBottomOf="@+id/tvjuduladdcabang"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/etCabang"/>
+        app:layout_constraintBottom_toTopOf="@+id/etaddCabang"/>
     <EditText
-        android:id="@+id/etCabang"
+        android:id="@+id/etaddCabang"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -45,10 +45,10 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvcabang"
-        app:layout_constraintBottom_toTopOf="@+id/tvalamat"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvaddcabang"
+        app:layout_constraintBottom_toTopOf="@+id/tvalamataddcabang"/>
     <TextView
-        android:id="@+id/tvalamat"
+        android:id="@+id/tvalamataddcabang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alamat"
@@ -56,10 +56,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCabang"
-        app:layout_constraintBottom_toTopOf="@+id/etAlamat"/>
+        app:layout_constraintTop_toBottomOf="@+id/etaddCabang"
+        app:layout_constraintBottom_toTopOf="@+id/etAlamataddcabang"/>
     <EditText
-        android:id="@+id/etAlamat"
+        android:id="@+id/etAlamataddcabang"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -70,10 +70,10 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvalamat"
-        app:layout_constraintBottom_toTopOf="@+id/tvTelepon"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvalamataddcabang"
+        app:layout_constraintBottom_toTopOf="@+id/tvTeleponaddcabang"/>
     <TextView
-        android:id="@+id/tvTelepon"
+        android:id="@+id/tvTeleponaddcabang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Telepon"
@@ -81,10 +81,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAlamat"
-        app:layout_constraintBottom_toTopOf="@+id/etTelepon"/>
+        app:layout_constraintTop_toBottomOf="@+id/etAlamataddcabang"
+        app:layout_constraintBottom_toTopOf="@+id/etTeleponaddcabang"/>
     <EditText
-        android:id="@+id/etTelepon"
+        android:id="@+id/etTeleponaddcabang"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -95,10 +95,10 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTelepon"
-        app:layout_constraintBottom_toTopOf="@+id/tvLayanan"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvTeleponaddcabang"
+        app:layout_constraintBottom_toTopOf="@+id/tvLayananaddcabang"/>
     <TextView
-        android:id="@+id/tvLayanan"
+        android:id="@+id/tvLayananaddcabang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Layanan"
@@ -106,10 +106,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTelepon"
-        app:layout_constraintBottom_toTopOf="@+id/etLayanan"/>
+        app:layout_constraintTop_toBottomOf="@+id/etTeleponaddcabang"
+        app:layout_constraintBottom_toTopOf="@+id/etLayananaddcabang"/>
     <EditText
-        android:id="@+id/etLayanan"
+        android:id="@+id/etLayananaddcabang"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -120,10 +120,10 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLayanan"
-        app:layout_constraintBottom_toTopOf="@+id/button"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvLayananaddcabang"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddcabang"/>
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonaddcabang"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:text="Simpan"
@@ -136,6 +136,6 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLayanan"/>
+        app:layout_constraintTop_toBottomOf="@+id/etLayananaddcabang"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

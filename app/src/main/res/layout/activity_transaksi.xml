@@ -9,41 +9,95 @@
     tools:context=".transaksi.TransaksiActivity">
 
     <TextView
-        android:id="@+id/judul"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvpelanggan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Transaksi"
-        android:textSize="25sp"
+        android:text="Pelanggan"
         android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvpelanggan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-    <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/tvlayananutama"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
-
-    </androidx.cardview.widget.CardView>
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:text="Batal"
-        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:text="Layanan Utama"
         android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/card1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:text="Bayar"
-        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvlayananutama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tvlayananumum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Layanan Umum"
         android:textStyle="bold"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/card2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvlayananumum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/btbatal"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:text="Batal"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="#6C81CE"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btpilihbayar"/>
+    <Button
+        android:id="@+id/btpilihbayar"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Pilih Pembayaran"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="#E282E7"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toEndOf="@+id/btbatal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
