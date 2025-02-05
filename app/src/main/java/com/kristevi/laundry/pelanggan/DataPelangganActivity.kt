@@ -30,8 +30,9 @@ class DataPelangganActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        fun init(){
-            rvDataPelanggan = findViewById(R.id.rvDataPelanggan)
-        }
+    }
+    fun init(){
+        rvDataPelanggan = findViewById(R.id.rvDataPelanggan)
+        fabTambahPelanggan = findViewById(R.id.fabTambahPelanggan)
     }
 }

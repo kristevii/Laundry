@@ -35,4 +35,16 @@
     <string name="tvCabangaddpegawai">Cabang</string>
     <string name="etCabangaddpegawai">Masukan Cabang</string>
     <string name="buttonaddapegawai">Simpan</string>
+    <string name="tvestimasi">Estimasi Hari Ini</string>
+    <string name="tvimg1dash">Transaksi</string>
+    <string name="tvimg2dash">Pelanggan</string>
+    <string name="tvimg3dash">Laporan</string>
+    <string name="tvdesc">Siap melayani pelanggan dengan sepenuh hati</string>
+    <string name="tvpesan">Jangan kecewakan pelanggan</string>
+    <string name="tvcard2dash">Akun</string>
+    <string name="tvcard3dash">Layanan</string>
+    <string name="tvcard4dash">Tambahan</string>
+    <string name="tvcard5dash">Pegawai</string>
+    <string name="tvcard6dash">Cabang</string>
+    <string name="tvcard7dash">Printer</string>
 </resources>

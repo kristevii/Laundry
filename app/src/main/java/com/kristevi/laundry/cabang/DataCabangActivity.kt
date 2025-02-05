@@ -19,7 +19,7 @@ class DataCabangActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_data_cabang)
 
-        val fabTambahCabang : FloatingActionButton = findViewById(R.id.fabTambahCabang)
+        val fabTambahCabang: FloatingActionButton = findViewById(R.id.fabTambahCabang)
         fabTambahCabang.setOnClickListener {
             val intent = Intent(this, TambahCabangActivity::class.java)
             startActivity(intent)
@@ -30,8 +30,9 @@ class DataCabangActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        fun init() {
-            rvDataCabang = findViewById(R.id.rvDataCabang)
-        }
+    }
+    fun init() {
+        rvDataCabang = findViewById(R.id.rvDataCabang)
+        fabTambahCabang = findViewById(R.id.fabTambahCabang)
     }
 }

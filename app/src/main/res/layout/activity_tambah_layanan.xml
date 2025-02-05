@@ -9,7 +9,7 @@
     tools:context=".layanan.TambahLayananActivity">
 
     <TextView
-        android:id="@+id/tvjudul"
+        android:id="@+id/tvjuduladdlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tambah Layanan"
@@ -20,20 +20,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvLayanan"/>
+        app:layout_constraintBottom_toTopOf="@+id/tvaddLayanan"/>
     <TextView
-        android:id="@+id/tvLayanan"
+        android:id="@+id/tvaddLayanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Layanan"
+        android:text="Nama Layanan"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvjudul"
-        app:layout_constraintBottom_toTopOf="@+id/etLayanan"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvjuduladdlayanan"
+        app:layout_constraintBottom_toTopOf="@+id/etaddLayanan"/>
     <EditText
-        android:id="@+id/etLayanan"
+        android:id="@+id/etaddLayanan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -44,35 +44,10 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLayanan"
-        app:layout_constraintBottom_toTopOf="@+id/tvDesc"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvaddLayanan"
+        app:layout_constraintBottom_toTopOf="@+id/tvHargaaddlayanan"/>
     <TextView
-        android:id="@+id/tvDesc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Keterangan"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLayanan"
-        app:layout_constraintBottom_toTopOf="@+id/etDesc"/>
-    <EditText
-        android:id="@+id/etDesc"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/radius"
-        android:hint="      Masukan Keterangan"
-        android:inputType="none"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
-        app:layout_constraintBottom_toTopOf="@+id/tvHarga"/>
-    <TextView
-        android:id="@+id/tvHarga"
+        android:id="@+id/tvHargaaddlayanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Harga"
@@ -80,10 +55,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDesc"
-        app:layout_constraintBottom_toTopOf="@+id/etHarga"/>
+        app:layout_constraintTop_toBottomOf="@+id/ethargaaddlayanan"
+        app:layout_constraintBottom_toTopOf="@+id/ethargaaddlayanan"/>
     <EditText
-        android:id="@+id/etHarga"
+        android:id="@+id/ethargaaddlayanan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -94,58 +69,36 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHarga"
-        app:layout_constraintBottom_toTopOf="@+id/tvSatuan"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvHargaaddlayanan"
+        app:layout_constraintBottom_toTopOf="@+id/tvcabangaddlayanan"/>
     <TextView
-        android:id="@+id/tvSatuan"
+        android:id="@+id/tvcabangaddlayanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Satuan"
+        android:text="Cabang"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etHarga"
-        app:layout_constraintBottom_toTopOf="@+id/spSatuan"/>
-    <Spinner
-        android:id="@+id/spSatuan"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:entries="@array/jeniskelamin"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/ethargaaddlayanan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSatuan"
-        app:layout_constraintBottom_toTopOf="@+id/tvEstimasi"/>
-    <TextView
-        android:id="@+id/tvEstimasi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Estimasi Pengerjaan"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/spSatuan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/etEstimasi"/>
+        app:layout_constraintBottom_toTopOf="@id/etcabangaddlayanan"/>
     <EditText
-        android:id="@+id/etEstimasi"
+        android:id="@+id/etcabangaddlayanan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
-        android:hint="      Masukan Estimasi"
+        android:hint="      Masukan Nama Cabang"
         android:inputType="none"
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvEstimasi"
+        app:layout_constraintTop_toBottomOf="@+id/tvcabangaddlayanan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button"/>
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddlayanan"/>
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonaddlayanan"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:text="Simpan"
@@ -158,6 +111,6 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEstimasi"/>
+        app:layout_constraintTop_toBottomOf="@+id/etcabangaddlayanan"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

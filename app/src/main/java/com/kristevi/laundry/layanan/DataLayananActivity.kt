@@ -31,8 +31,9 @@ class DataLayananActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        fun init(){
-            rvDataLayanan = findViewById(R.id.rvDataLayanan)
-        }
+    }
+    fun init(){
+        rvDataLayanan = findViewById(R.id.rvDataLayanan)
+        fabTambahLayanan = findViewById(R.id.fabTambahLayanan)
     }
 }

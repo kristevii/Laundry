@@ -30,8 +30,9 @@ class DataPegawaiActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        fun init() {
-            rvDataPegawai = findViewById(R.id.rvDataPegawai)
-        }
+    }
+    fun init() {
+        rvDataPegawai = findViewById(R.id.rvDataPegawai)
+        fabTambahPegawai = findViewById(R.id.fabTambahPegawai)
     }
 }

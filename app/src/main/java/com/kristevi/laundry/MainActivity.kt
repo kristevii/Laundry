@@ -37,29 +37,29 @@ class MainActivity : AppCompatActivity() {
     lateinit var card7 : CardView
     lateinit var tvsapa: TextView
     lateinit var tvtanggal : TextView
-    lateinit var estimasi: TextView
-    lateinit var jmlestimasi : TextView
+    lateinit var tvestimasi: TextView
+    lateinit var tvjmlestimasi : TextView
     lateinit var garis : View
-    lateinit var tvimg1 : TextView
-    lateinit var tvimg2: TextView
-    lateinit var tvimg3 : TextView
+    lateinit var tvimg1dash : TextView
+    lateinit var tvimg2dash: TextView
+    lateinit var tvimg3dash : TextView
     lateinit var tvdesc : TextView
     lateinit var tvpesan : TextView
-    lateinit var img1 : ImageView
-    lateinit var img2 : ImageView
-    lateinit var img3 : ImageView
-    lateinit var img4 : ImageView
-    lateinit var img5 : ImageView
-    lateinit var img6 : ImageView
-    lateinit var img7 : ImageView
-    lateinit var img8 : ImageView
-    lateinit var img9 : ImageView
-    lateinit var tvcard2 : TextView
-    lateinit var tvcard3 : TextView
-    lateinit var tvcard4 : TextView
-    lateinit var tvcard5 : TextView
-    lateinit var tvcard6 : TextView
-    lateinit var tvcard7 : TextView
+    lateinit var img1dash : ImageView
+    lateinit var img2dash : ImageView
+    lateinit var img3dash : ImageView
+    lateinit var img4dash : ImageView
+    lateinit var img5dash : ImageView
+    lateinit var img6dash : ImageView
+    lateinit var img7dash : ImageView
+    lateinit var img8dash : ImageView
+    lateinit var img9dash : ImageView
+    lateinit var tvcard2dash : TextView
+    lateinit var tvcard3dash : TextView
+    lateinit var tvcard4dash : TextView
+    lateinit var tvcard5dash : TextView
+    lateinit var tvcard6dash : TextView
+    lateinit var tvcard7dash : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -137,29 +137,29 @@ class MainActivity : AppCompatActivity() {
         card7 = findViewById(R.id.card7)
         tvsapa = findViewById(R.id.tvsapa)
         tvtanggal  = findViewById(R.id.tvtanggal)
-        estimasi = findViewById(R.id.estimasi)
-        jmlestimasi = findViewById(R.id.jmlestimasi)
+        tvestimasi = findViewById(R.id.estimasi)
+        tvjmlestimasi = findViewById(R.id.jmlestimasi)
         garis = findViewById(R.id.garis)
-        tvimg1 = findViewById(R.id.tvimg1)
-        tvimg2 = findViewById(R.id.tvimg2)
-        tvimg3 = findViewById(R.id.tvimg3)
+        tvimg1dash = findViewById(R.id.tvimg1dash)
+        tvimg2dash = findViewById(R.id.tvimg2dash)
+        tvimg3dash = findViewById(R.id.tvimg3dash)
         tvdesc = findViewById(R.id.tvdesc)
         tvpesan = findViewById(R.id.tvpesan)
-        img1 = findViewById(R.id.img1)
-        img2 = findViewById(R.id.img2)
-        img3 = findViewById(R.id.img3)
-        img4 = findViewById(R.id.img4)
-        img5 = findViewById(R.id.img5)
-        img6 = findViewById(R.id.img6)
-        img7 = findViewById(R.id.img7)
-        img8 = findViewById(R.id.img8)
-        img9 = findViewById(R.id.img9)
-        tvcard2 = findViewById(R.id.tvcard2)
-        tvcard3 = findViewById(R.id.tvcard3)
-        tvcard4 = findViewById(R.id.tvcard4)
-        tvcard5 = findViewById(R.id.tvcard5)
-        tvcard6 = findViewById(R.id.tvcard6)
-        tvcard7 = findViewById(R.id.tvcard7)
+        img1dash = findViewById(R.id.img1dash)
+        img2dash = findViewById(R.id.img2dash)
+        img3dash = findViewById(R.id.img3dash)
+        img4dash = findViewById(R.id.img4dash)
+        img5dash = findViewById(R.id.img5dash)
+        img6dash = findViewById(R.id.img6dash)
+        img7dash = findViewById(R.id.img7dash)
+        img8dash = findViewById(R.id.img8dash)
+        img9dash = findViewById(R.id.img9dash)
+        tvcard2dash = findViewById(R.id.tvcard2dash)
+        tvcard3dash = findViewById(R.id.tvcard3dash)
+        tvcard4dash = findViewById(R.id.tvcard4dash)
+        tvcard5dash = findViewById(R.id.tvcard5dash)
+        tvcard6dash = findViewById(R.id.tvcard6dash)
+        tvcard7dash = findViewById(R.id.tvcard7dash)
     }
     private fun getGreetingMessage(): String {
         val calendar = Calendar.getInstance()

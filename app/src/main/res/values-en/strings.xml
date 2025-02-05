@@ -35,4 +35,14 @@
     <string name="tvnamaaddpelanggan">Full Name</string>
     <string name="tvjuduladdpegawai">Add Employee</string>
     <string name="tvnamaaddpegawai">Full Name</string>
+    <string name="tvestimasi">Today\'s Estimasion</string>
+    <string name="tvimg1dash">Transaction</string>
+    <string name="tvimg2dash">Customer</string>
+    <string name="tvimg3dash">Report</string>
+    <string name="tvdesc">Ready</string>
+    <string name="tvcard2dash">Account</string>
+    <string name="tvcard4dash">Addition</string>
+    <string name="tvcard5dash">Employee</string>
+    <string name="tvcard6dash">Branch</string>
+    <string name="tvcard7dash">Printers</string>
 </resources>
