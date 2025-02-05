@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="15dp"
-    tools:context="pelanggan.TambahPelangganActivity">
+    tools:context=".pelanggan.TambahPelangganActivity">
 
     <TextView
-        android:id="@+id/tvjudul"
+        android:id="@+id/tvjuduladdpelanggan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tambah Pelanggan"
+        android:text="@string/tvjuduladdpelanggan"
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -23,88 +23,88 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvnama"/>
+        app:layout_constraintBottom_toTopOf="@+id/tvnamaaddpelanggan"/>
     <TextView
-        android:id="@+id/tvnama"
+        android:id="@+id/tvnamaaddpelanggan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Lengkap"
+        android:text="@string/tvnamaaddpelanggan"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvjudul"
-        app:layout_constraintBottom_toTopOf="@+id/etName"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvjuduladdpelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/etNameaddpelanggan"/>
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etNameaddpelanggan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
-        android:hint="      Masukan Nama Lengkap"
+        android:hint="@string/etNameaddpelanggan"
         android:inputType="none"
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvnama"
-        app:layout_constraintBottom_toTopOf="@+id/tvalamat"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvnamaaddpelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/tvalamataddpelanggan"/>
     <TextView
-        android:id="@+id/tvalamat"
+        android:id="@+id/tvalamataddpelanggan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alamat"
+        android:text="@string/tvalamatpelanggan"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName"
-        app:layout_constraintBottom_toTopOf="@+id/etAlamat"/>
+        app:layout_constraintTop_toBottomOf="@+id/etNameaddpelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/etAlamataddpelanggan"/>
     <EditText
-        android:id="@+id/etAlamat"
+        android:id="@+id/etAlamataddpelanggan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/radius"
-        android:hint="      Masukan Alamat Lengkap"
+        android:hint="@string/etAlamataddpelanggan"
         android:inputType="none"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvalamat"
-        app:layout_constraintBottom_toTopOf="@+id/tvNoHp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvalamataddpelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/tvNoHpaddpelanggan"/>
     <TextView
-        android:id="@+id/tvNoHp"
+        android:id="@+id/tvNoHpaddpelanggan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Handphone"
+        android:text="@string/tvNoHpaddpelanggan"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAlamat"
-        app:layout_constraintBottom_toTopOf="@+id/etNoHp"/>
+        app:layout_constraintTop_toBottomOf="@+id/etAlamataddpelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/etNoHpaddpelanggan"/>
     <EditText
-        android:id="@+id/etNoHp"
+        android:id="@+id/etNoHpaddpelanggan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/radius"
-        android:hint="      Masukan No HP Aktif"
+        android:hint="@string/etNoHpaddpelanggan"
         android:inputType="none"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNoHp"
-        app:layout_constraintBottom_toTopOf="@+id/button"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvNoHpaddpelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddpelanggan"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonaddpelanggan"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Simpan"
+        android:text="@string/buttonaddpelanggan"
         android:textSize="16sp"
         android:textStyle="bold"
         android:backgroundTint="#3272BF"
@@ -114,6 +114,6 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNoHp"/>
+        app:layout_constraintTop_toBottomOf="@+id/etNoHpaddpelanggan"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

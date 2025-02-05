@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="15dp"
-    tools:context="laporan.LaporanActivity">
+    tools:context=".laporan.LaporanActivity">
 
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/tvjudullaporan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Laporan"
@@ -19,22 +19,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/card1"/>
+        app:layout_constraintBottom_toTopOf="@+id/card1laporan"/>
     <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
+        android:id="@+id/card1laporan"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardCornerRadius="20dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/judul"
+        app:layout_constraintTop_toBottomOf="@+id/tvjudullaporan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/card2">
+        app:layout_constraintBottom_toTopOf="@+id/card2laporan">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/imgcard1"
+                android:id="@+id/imgcard1laporan"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@drawable/laporan_penjualan"
@@ -43,7 +43,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
             <TextView
-                android:id="@+id/tvjudul1"
+                android:id="@+id/tvjudul1laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laporan Penjualan"
@@ -52,17 +52,18 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgcard1"/>
+                app:layout_constraintStart_toEndOf="@+id/imgcard1laporan"/>
             <TextView
-                android:id="@+id/tvdesc1"
+                android:id="@+id/tvdesc1laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Melihat data berdasarkan Hari, \nBulan, dan Tahun."
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvjudul1"
-                app:layout_constraintStart_toEndOf="@+id/imgcard1"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvjudul1laporan"
+                app:layout_constraintStart_toEndOf="@+id/imgcard1laporan"/>
             <ImageView
+                android:id="@+id/arrow1laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_arrow_forward_ios_24"
@@ -73,20 +74,20 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/card2"
+        android:id="@+id/card2laporan"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardCornerRadius="20dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/card1"
+        app:layout_constraintTop_toBottomOf="@+id/card1laporan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/card3">
+        app:layout_constraintBottom_toTopOf="@+id/card3laporan">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/imgcard2"
+                android:id="@+id/imgcard2laporan"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@drawable/data_pelanggan"
@@ -95,7 +96,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
             <TextView
-                android:id="@+id/tvjudul2"
+                android:id="@+id/tvjudul2laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laporan Pelanggan"
@@ -104,17 +105,18 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgcard2"/>
+                app:layout_constraintStart_toEndOf="@+id/imgcard2laporan"/>
             <TextView
-                android:id="@+id/tvdesc2"
+                android:id="@+id/tvdesc2laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Melihat data berdasarkan Nama\nPelanggan."
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvjudul2"
-                app:layout_constraintStart_toEndOf="@+id/imgcard2"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvjudul2laporan"
+                app:layout_constraintStart_toEndOf="@+id/imgcard2laporan"/>
             <ImageView
+                android:id="@+id/arrow2laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_arrow_forward_ios_24"
@@ -125,20 +127,20 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/card3"
+        android:id="@+id/card3laporan"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardCornerRadius="20dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/card2"
+        app:layout_constraintTop_toBottomOf="@+id/card2laporan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/card4">
+        app:layout_constraintBottom_toTopOf="@+id/card4laporan">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/imgcard3"
+                android:id="@+id/imgcard3laporan"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@drawable/laporan_pegawai1"
@@ -147,7 +149,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
             <TextView
-                android:id="@+id/tvjudul3"
+                android:id="@+id/tvjudul3laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laporan Pegawai"
@@ -156,17 +158,18 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgcard3"/>
+                app:layout_constraintStart_toEndOf="@+id/imgcard3laporan"/>
             <TextView
-                android:id="@+id/tvdesc3"
+                android:id="@+id/tvdesc3laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Melihat data penjualan berdasarkan\nAkun Pegawai."
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvjudul3"
-                app:layout_constraintStart_toEndOf="@+id/imgcard3"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvjudul3laporan"
+                app:layout_constraintStart_toEndOf="@+id/imgcard3laporan"/>
             <ImageView
+                android:id="@+id/arrow3laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_arrow_forward_ios_24"
@@ -177,19 +180,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/card4"
+        android:id="@+id/card4laporan"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardCornerRadius="20dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/card3"
+        app:layout_constraintTop_toBottomOf="@+id/card3laporan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/imgcard4"
+                android:id="@+id/imgcard4laporan"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/laporan_pengeluaran"
@@ -198,7 +201,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
             <TextView
-                android:id="@+id/tvjudul4"
+                android:id="@+id/tvjudul4laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laporan Pengeluaran"
@@ -207,17 +210,18 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgcard4"/>
+                app:layout_constraintStart_toEndOf="@+id/imgcard4laporan"/>
             <TextView
-                android:id="@+id/tvdesc4"
+                android:id="@+id/tvdesc4laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Melihat data pengeluaran\nberdasarkan Hari, Bulan, dan Tahun."
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvjudul4"
-                app:layout_constraintStart_toEndOf="@+id/imgcard4"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvjudul4laporan"
+                app:layout_constraintStart_toEndOf="@+id/imgcard4laporan"/>
             <ImageView
+                android:id="@+id/arrow4laporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_arrow_forward_ios_24"

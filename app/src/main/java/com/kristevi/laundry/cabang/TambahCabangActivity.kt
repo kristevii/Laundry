@@ -1,4 +1,4 @@
-package laporan
+package com.kristevi.laundry.cabang
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,11 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kristevi.laundry.R
 
-class LaporanActivity : AppCompatActivity() {
+class TambahCabangActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_laporan)
+        setContentView(R.layout.activity_tambah_cabang)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

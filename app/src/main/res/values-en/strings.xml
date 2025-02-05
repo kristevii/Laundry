@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Laundry</string>
+    <string name="tvCardPelangganId">Customer Id</string>
+    <string name="tvnamapelanggan">Customer Name</string>
+    <string name="tvalamatpelanggan">Address</string>
+    <string name="tvnohppelanggan">Phone Number</string>
+    <string name="btHubungipelanggan">Contact</string>
+    <string name="btLihatpelanggan">Show</string>
+    <string name="tvCardPegawaiId">Employee Id</string>
+    <string name="tvnamapegawai">Name</string>
+    <string name="tvalamatpegawai">Address</string>
+    <string name="tvnohppegawai">Phone Number</string>
+    <string name="tvcabangpegawai">Branch</string>
+    <string name="btHubungipegawai">Contact</string>
+    <string name="btLihatpegawai">Show</string>
+    <string name="tvterdaftarpegawai">Registered</string>
+    <string name="tvterdaftarpelanggan">Registered</string>
+    <string name="tvsapa">Good Afternoon, Kristevi</string>
+    <string name="tvjuduladdpelanggan">Add Customer</string>
+    <string name="etNoHpaddpelanggan">Enter Active Number Phone</string>
+    <string name="buttonaddpelanggan">Save</string>
+    <string name="etAlamataddpelanggan">Enter Full Address</string>
+    <string name="tvNoHpaddpelanggan">Phone Number</string>
+    <string name="etNameaddpelanggan">Enter Full Name</string>
+    <string name="tvalamataddpelanggan">Address</string>
+    <string name="etNameaddpegawai">Enter Full Name</string>
+    <string name="tvalamataddpegawai">Address</string>
+    <string name="etAlamataddpegawai">Enter Full Address</string>
+    <string name="tvNoHpaddpegawai">Number Phone</string>
+    <string name="etNoHpaddpegawai">Enter Active Number Phone</string>
+    <string name="tvCabangaddpegawai">Branch</string>
+    <string name="etCabangaddpegawai">Enter Branch</string>
+    <string name="buttonaddapegawai">Save</string>
+    <string name="tvnamaaddpelanggan">Full Name</string>
+    <string name="tvjuduladdpegawai">Add Employee</string>
+    <string name="tvnamaaddpegawai">Full Name</string>
+</resources>

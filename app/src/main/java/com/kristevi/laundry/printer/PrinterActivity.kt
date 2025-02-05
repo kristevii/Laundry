@@ -1,4 +1,4 @@
-package printer
+package com.kristevi.laundry.printer
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

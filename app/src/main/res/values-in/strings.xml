@@ -1,13 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Laundry</string>
-    <string-array name="jeniskelamin">
-        <item>Perempuan</item>
-        <item>Laki-Laki</item>
-    </string-array>
-    <string-array name="satuan">
-        <item>Kilogram (Kg)</item>
-        <item>Pieces (Pcs)</item>
-    </string-array>
     <string name="tvCardPelangganId">Id Pelanggan</string>
     <string name="tvnamapelanggan">Nama Pelanggan</string>
     <string name="tvalamatpelanggan">Alamat</string>
@@ -25,10 +18,10 @@
     <string name="tvterdaftarpelanggan">Terdaftar</string>
     <string name="tvsapa">Selamat Siang, Kristevi</string>
     <string name="tvjuduladdpelanggan">Tambah Pelanggan</string>
-    <string name="tvnamaaddpelanggan">Nama Lengkap</string>
-    <string name="etNameaddpelanggan">Masukan Nama Lengkap</string>
     <string name="tvalamataddpelanggan">Alamat</string>
     <string name="etAlamataddpelanggan">Masukan Alamat Lengkap</string>
+    <string name="tvnamaaddpelanggan">Nama Lengkap</string>
+    <string name="etNameaddpelanggan">Masukan Nama Lengkap</string>
     <string name="tvNoHpaddpelanggan">No HP</string>
     <string name="etNoHpaddpelanggan">Masukan No HP Aktif</string>
     <string name="buttonaddpelanggan">Simpan</string>

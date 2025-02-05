@@ -11,12 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import cabang.DataCabangActivity
-import laporan.LaporanActivity
-import layanan.DataLayananActivity
-import pegawai.DataPegawaiActivity
-import pelanggan.DataPelangganActivity
-import tambahan.DataTambahanActivity
+import com.kristevi.laundry.cabang.DataCabangActivity
+import com.kristevi.laundry.laporan.LaporanActivity
+import com.kristevi.laundry.layanan.DataLayananActivity
+import com.kristevi.laundry.pegawai.DataPegawaiActivity
+import com.kristevi.laundry.pelanggan.DataPelangganActivity
+import com.kristevi.laundry.tambahan.DataTambahanActivity
 import java.text.SimpleDateFormat
 import java.util.*
 

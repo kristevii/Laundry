@@ -13,49 +13,49 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
-            android:name="transaksi.TransaksiActivity"
+            android:name=".transaksi.TransaksiActivity"
             android:exported="false" />
         <activity
-            android:name="printer.PrinterActivity"
+            android:name=".printer.PrinterActivity"
             android:exported="false" />
         <activity
-            android:name="laporan.LaporanActivity"
+            android:name=".laporan.LaporanActivity"
             android:exported="false" />
         <activity
             android:name=".card_data_tambahan"
             android:exported="false" />
         <activity
-            android:name="tambahan.TambahTambahanActivity"
+            android:name=".tambahan.TambahTambahanActivity"
             android:exported="false" />
         <activity
-            android:name="tambahan.DataTambahanActivity"
+            android:name=".tambahan.DataTambahanActivity"
             android:exported="false" />
         <activity
-            android:name="layanan.TambahLayananActivity"
+            android:name=".layanan.TambahLayananActivity"
             android:exported="false" />
         <activity
-            android:name="layanan.DataLayananActivity"
+            android:name=".layanan.DataLayananActivity"
             android:exported="false" />
         <activity
-            android:name="cabang.TambahCabangActivity"
+            android:name=".cabang.TambahCabangActivity"
             android:exported="false" />
         <activity
-            android:name="cabang.DataCabangActivity"
+            android:name=".cabang.DataCabangActivity"
             android:exported="false" />
         <activity
-            android:name="pegawai.TambahPegawaiActivity"
+            android:name=".pegawai.TambahPegawaiActivity"
             android:exported="false" />
         <activity
-            android:name="pegawai.DataPegawaiActivity"
+            android:name=".pegawai.DataPegawaiActivity"
             android:exported="false" />
         <activity
-            android:name="pelanggan.TambahPelangganActivity"
+            android:name=".pelanggan.TambahPelangganActivity"
             android:exported="false" />
         <activity
             android:name="pelanggan.PelangganActivity"
             android:exported="false" />
         <activity
-            android:name="pelanggan.DataPelangganActivity"
+            android:name=".pelanggan.DataPelangganActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

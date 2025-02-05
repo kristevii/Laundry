@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardlayanan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="5dp"
+    android:layout_marginTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvlayanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Layanan"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"/>
+        <TextView
+            android:id="@+id/tvketerangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keterangan"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"/>
+        <TextView
+            android:id="@+id/tvharga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"/>
+        <TextView
+            android:id="@+id/tvestimasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimasi Pengerjaan"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

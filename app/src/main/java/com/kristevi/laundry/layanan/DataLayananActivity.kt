@@ -1,4 +1,4 @@
-package layanan
+package com.kristevi.laundry.layanan
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
-import cabang.TambahCabangActivity
+import com.kristevi.laundry.cabang.TambahCabangActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kristevi.laundry.R
 

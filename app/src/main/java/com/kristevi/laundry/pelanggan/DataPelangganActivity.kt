@@ -1,4 +1,4 @@
-package tambahan
+package com.kristevi.laundry.pelanggan
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,20 +9,19 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kristevi.laundry.R
-import pelanggan.TambahPelangganActivity
 
-class DataTambahanActivity : AppCompatActivity() {
-    lateinit var rvDataTambahan : RecyclerView
-    lateinit var fabTambahTambahan : FloatingActionButton
+class DataPelangganActivity : AppCompatActivity() {
+    lateinit var rvDataPelanggan : RecyclerView
+    lateinit var fabTambahPelanggan : FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_data_tambahan)
+        setContentView(R.layout.activity_data_pelanggan)
 
-        val fabTambahTambahan : FloatingActionButton = findViewById(R.id.fabTambahTambahan)
-        fabTambahTambahan.setOnClickListener {
-            val intent = Intent(this, TambahTambahanActivity::class.java)
+        val fabTambahPelanggan : FloatingActionButton = findViewById(R.id.fabTambahPelanggan)
+        fabTambahPelanggan.setOnClickListener {
+            val intent = Intent(this, TambahPelangganActivity::class.java)
             startActivity(intent)
         }
 
@@ -32,7 +31,7 @@ class DataTambahanActivity : AppCompatActivity() {
             insets
         }
         fun init(){
-            rvDataTambahan = findViewById(R.id.rvDataTambahan)
+            rvDataPelanggan = findViewById(R.id.rvDataPelanggan)
         }
     }
 }
