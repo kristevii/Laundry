@@ -54,4 +54,27 @@
     <string name="tvcard5dash">Pegawai</string>
     <string name="tvcard6dash">Cabang</string>
     <string name="tvcard7dash">Printer</string>
+    <string name="validasi_alamat_pelanggan">Alamat tidak boleh kosong</string>
+    <string name="validasi_nama_pelanggan">Nama tidak boleh kosong</string>
+    <string name="validasi_noHP_pelanggan">No HP tidak boleh kosong</string>
+    <string name="validasi_cabang_pelanggan">Cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_pelanggan">Sukses simpan pelanggan</string>
+    <string name="gagal_simpan_pelanggan">Gagal simpan pelanggan</string>
+    <string name="validasi_nama_pegawai">Nama tidak boleh kosong</string>
+    <string name="validasi_alamat_pegawai">Alamat tidak boleh kosong</string>
+    <string name="validasi_noHP_pegawai">No HP tidak boleh kosong</string>
+    <string name="validasi_cabang_pegawai">Cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_pegawai">Sukses simpan pegawai</string>
+    <string name="gagal_simpan_pegawai">Gagal simpan Pegawai</string>
+    <string name="validasi_nama_cabang">Nama tidak boleh kosong</string>
+    <string name="validasi_alamat_cabang">Alamat tidak boleh kosong</string>
+    <string name="validasi_noHP_cabang">No HP tidak boleh kosong</string>
+    <string name="validasi_layanan_cabang">Layanan tidak boleh kosong</string>
+    <string name="sukses_simpan_cabang">Sukses simpan cabang</string>
+    <string name="gagal_simpan_cabang">Gagal simpan cabang</string>
+    <string name="validasi_nama_layanan">Nama layanan tidak boleh kosong</string>
+    <string name="validasi_harga_layanan">Harga layanan tidak boleh kosong</string>
+    <string name="validasi_cabang_layanan">Cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_layanan">Sukses simpan layanan</string>
+    <string name="gagal_simpan_layanan">Gagal simpan layanan</string>
 </resources>

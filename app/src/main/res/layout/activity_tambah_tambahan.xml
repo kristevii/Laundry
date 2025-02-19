@@ -9,10 +9,10 @@
     tools:context=".tambahan.TambahTambahanActivity">
 
     <TextView
-        android:id="@+id/tvjudul"
+        android:id="@+id/tvjuduladdtambahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tambah Layanan\nTambahan"
+        android:text="Tambahan"
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -23,110 +23,60 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvnama"/>
+        app:layout_constraintBottom_toTopOf="@+id/tvnamaaddtambahan"/>
     <TextView
-        android:id="@+id/tvnama"
+        android:id="@+id/tvnamaaddtambahan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Lengkap"
+        android:text="Nama Tambahan"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvjudul"
-        app:layout_constraintBottom_toTopOf="@+id/etName"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvjuduladdtambahan"
+        app:layout_constraintBottom_toTopOf="@+id/etNameaddtambahan"/>
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etNameaddtambahan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/radius"
-        android:hint="      Masukan Nama Lengkap"
+        android:hint="      Masukan Nama Tambahan"
         android:inputType="none"
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvnama"
-        app:layout_constraintBottom_toTopOf="@+id/tvalamat"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvhargaaddtambahan"
+        app:layout_constraintBottom_toTopOf="@+id/tvhargaaddtambahan"/>
     <TextView
-        android:id="@+id/tvalamat"
+        android:id="@+id/tvhargaaddtambahan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alamat"
+        android:text="Harga"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName"
-        app:layout_constraintBottom_toTopOf="@+id/etAlamat"/>
+        app:layout_constraintTop_toBottomOf="@+id/etNameaddtambahan"
+        app:layout_constraintBottom_toTopOf="@+id/ethargaddtambahan"/>
     <EditText
-        android:id="@+id/etAlamat"
+        android:id="@+id/ethargaddtambahan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/radius"
-        android:hint="      Masukan Alamat Lengkap"
-        android:inputType="none"
+        android:hint="      Masukan Harga Tambahan"
+        android:inputType="phone"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvalamat"
-        app:layout_constraintBottom_toTopOf="@+id/tvNoHp"/>
-    <TextView
-        android:id="@+id/tvNoHp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No Handphone"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAlamat"
-        app:layout_constraintBottom_toTopOf="@+id/etNoHp"/>
-    <EditText
-        android:id="@+id/etNoHp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/radius"
-        android:hint="      Masukan No HP Aktif"
-        android:inputType="none"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNoHp"
-        app:layout_constraintBottom_toTopOf="@+id/tvTambahan"/>
-    <TextView
-        android:id="@+id/tvTambahan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tambahan"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNoHp"
-        app:layout_constraintBottom_toTopOf="@+id/etTambahan"/>
-    <EditText
-        android:id="@+id/etTambahan"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/radius"
-        android:hint="      Masukan Tambahan"
-        android:inputType="none"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTambahan"
-        app:layout_constraintBottom_toTopOf="@+id/button"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvhargaaddtambahan"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddtambahan"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonaddtambahan"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:text="Simpan"
@@ -139,6 +89,6 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTambahan"/>
+        app:layout_constraintTop_toBottomOf="@+id/ethargaddtambahan"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
