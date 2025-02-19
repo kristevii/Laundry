@@ -32,20 +32,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvjuduladdlayanan"
         app:layout_constraintBottom_toTopOf="@+id/etaddLayanan"/>
+
     <EditText
         android:id="@+id/etaddLayanan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/radius"
-        android:hint="      Masukan Layanan yang tersedia"
-        android:inputType="none"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius"
+        android:hint="      Masukan Layanan"
+        android:inputType="none"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvHargaaddlayanan"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvaddLayanan"
-        app:layout_constraintBottom_toTopOf="@+id/tvHargaaddlayanan"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvaddLayanan" />
+
     <TextView
         android:id="@+id/tvHargaaddlayanan"
         android:layout_width="match_parent"
@@ -55,6 +60,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ethargaaddlayanan"
         app:layout_constraintBottom_toTopOf="@+id/ethargaaddlayanan"/>
     <EditText
@@ -67,6 +73,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHargaaddlayanan"
@@ -93,6 +100,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@+id/tvcabangaddlayanan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

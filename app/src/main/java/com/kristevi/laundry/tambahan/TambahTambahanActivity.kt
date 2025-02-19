@@ -59,11 +59,11 @@ class TambahTambahanActivity : AppCompatActivity() {
 
         layananBaru.setValue(data)
             .addOnSuccessListener {
-                Toast.makeText(this, this.getString(R.string.sukses_simpan_layanan), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, this.getString(R.string.sukses_simpan_tambahan), Toast.LENGTH_SHORT).show()
                 finish()
             }
             .addOnFailureListener() {
-                Toast.makeText(this, this.getString(R.string.gagal_simpan_layanan), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, this.getString(R.string.gagal_simpan_tambahan), Toast.LENGTH_SHORT).show()
             }
     }
 
@@ -72,14 +72,14 @@ class TambahTambahanActivity : AppCompatActivity() {
         val harga = ethargaaddtambahan.text.toString()
         // validasi data
         if (nama.isEmpty()) {
-            etNameaddtambahan.error = this.getString(R.string.validasi_nama_layanan)
-            Toast.makeText(this, this.getString(R.string.validasi_nama_layanan), Toast.LENGTH_SHORT).show()
+            etNameaddtambahan.error = this.getString(R.string.validasi_nama_tambahan)
+            Toast.makeText(this, this.getString(R.string.validasi_nama_tambahan), Toast.LENGTH_SHORT).show()
             etNameaddtambahan.requestFocus()
             return
         }
         if (harga.isEmpty()) {
-            ethargaaddtambahan.error = this.getString(R.string.validasi_harga_layanan)
-            Toast.makeText(this, this.getString(R.string.validasi_harga_layanan), Toast.LENGTH_SHORT).show()
+            ethargaaddtambahan.error = this.getString(R.string.validasi_harga_tambahan)
+            Toast.makeText(this, this.getString(R.string.validasi_harga_tambahan), Toast.LENGTH_SHORT).show()
             ethargaaddtambahan.requestFocus()
             return
         }

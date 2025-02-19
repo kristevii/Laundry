@@ -61,8 +61,17 @@
     <string name="gagal_simpan_pegawai">Gagal simpan pegawai</string>
     <string name="validasi_nama_cabang">Nama tidak boleh kosong</string>
     <string name="validasi_alamat_cabang">Alamat tidak boleh kosong</string>
-    <string name="validasi_layanan_cabang">ff</string>
-    <string name="sukses_simpan_cabang">sUKSUS</string>
-    <string name="validasi_noHP_cabang">gg</string>
-    <string name="gagal_simpan_cabang">ff</string>
+    <string name="validasi_layanan_cabang">Layanan tidak boleh kosong</string>
+    <string name="sukses_simpan_cabang">Sukses simpan layanan</string>
+    <string name="validasi_noHP_cabang">No HP tidak boleh kosong</string>
+    <string name="gagal_simpan_cabang">Gagal simpan layanan</string>
+    <string name="validasi_nama_layanan">Nama layanan tidak boleh kosong</string>
+    <string name="validasi_harga_layanan">Harga layanan tidak boleh kosong</string>
+    <string name="validasi_cabang_layanan">Cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_layanan">Sukses simpan layanan</string>
+    <string name="gagal_simpan_layanan">Gagal simpan layanan</string>
+    <string name="validasi_nama_tambahan">Nama tambahan tidak boleh kosong</string>
+    <string name="validasi_harga_tambahan">Harga tambahan tidak boleh kosong</string>
+    <string name="sukses_simpan_tambahan">Sukses simpan tambahan</string>
+    <string name="gagal_simpan_tambahan">Gagal simpan tambahan</string>
 </resources>

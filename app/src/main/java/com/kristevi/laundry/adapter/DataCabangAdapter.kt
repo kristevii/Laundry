@@ -24,21 +24,15 @@ class DataCabangAdapter(private val listcabang: ArrayList<ModelCabang>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listcabang[position]
 
-        holder.tvcardidcabang.text = item.idCabang ?: "Tidak ada ID"
-        holder.tvnamacabang.text = item.namaCabang ?: "Nama tidak tersedia"
-        holder.tvalamatcabang.text = item.alamatCabang ?: "Alamat tidak tersedia"
-        holder.tvteleponcabang.text = item.noHPCabang ?: "No HP tidak tersedia"
-
+        holder.tvcardidcabang.text = item.idCabang
+        holder.tvnamacabang.text = item.namaCabang
+        holder.tvalamatcabang.text = item.alamatCabang
+        holder.tvteleponcabang.text = item.noHPCabang
         holder.cardcabang.setOnClickListener {
-            // Implementasi untuk card pegawai, misalnya navigasi ke detail pegawai
         }
-
         holder.btHubungicabang.setOnClickListener {
-            // Implementasi untuk tombol Hubungi
         }
-
         holder.btLihatcabang.setOnClickListener {
-            // Implementasi untuk tombol Lihat
         }
     }
 

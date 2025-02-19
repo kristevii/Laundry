@@ -24,10 +24,10 @@ class DataLayananAdapter(private val listlayanan: ArrayList<ModelLayanan>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listlayanan[position]
 
-        holder.tvcardidlayanan.text = item.idLayanan ?: "Tidak ada ID"
-        holder.tvnamalayanan.text = item.namaLayanan ?: "Nama tidak tersedia"
-        holder.tvhargalayanan.text = item.hargaLayanan ?: "Harga tidak tersedia"
-        holder.tvcabanglayanan.text = item.cabangLayanan ?: "Cabang tidak tersedia"
+        holder.tvcardidlayanan.text = item.idLayanan
+        holder.tvnamalayanan.text = item.namaLayanan
+        holder.tvhargalayanan.text = item.hargaLayanan
+        holder.tvcabanglayanan.text = item.cabangLayanan
         holder.cardlayanan.setOnClickListener {
         }
     }

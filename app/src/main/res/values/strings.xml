@@ -77,4 +77,8 @@
     <string name="validasi_cabang_layanan">Cabang tidak boleh kosong</string>
     <string name="sukses_simpan_layanan">Sukses simpan layanan</string>
     <string name="gagal_simpan_layanan">Gagal simpan layanan</string>
+    <string name="validasi_nama_tambahan">Nama tambahan tidak boleh kosong</string>
+    <string name="validasi_harga_tambahan">Harga tambahan tidak boleh kosong</string>
+    <string name="sukses_simpan_tambahan">Sukses simpan tambahan</string>
+    <string name="gagal_simpan_tambahan">Gagal simpan tambahan</string>
 </resources>

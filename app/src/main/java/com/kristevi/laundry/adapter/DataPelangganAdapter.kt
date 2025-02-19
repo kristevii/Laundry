@@ -27,10 +27,10 @@ class DataPelangganAdapter (
 
     override fun onBindViewHolder(holder: ViewHolder,position:Int){
         val item = listpelanggan[position]
-        holder.tvCardPelangganId.text = item.idPelanggan ?: "Tidak ada ID"
-        holder.tvnamapelanggan.text = item.namaPelanggan
-        holder.tvalamatpelanggan.text = item.alamatPelanggan
-        holder.tvnohppelanggan.text = item.noHPPelanggan
+        holder.tvCardPelangganId.text = "Id Pelanggan : ${item.idPelanggan}"
+        holder.tvnamapelanggan.text = "Nama     : ${item.namaPelanggan}"
+        holder.tvalamatpelanggan.text = "Alamat     : ${item.alamatPelanggan}"
+        holder.tvnohppelanggan.text = "Telepon  : ${item.noHPPelanggan}"
         holder.tvterdaftarpelanggan.text = item.terdaftar
         holder.cardpelanggan.setOnClickListener {
         }
