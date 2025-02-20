@@ -24,10 +24,11 @@ class DataPegawaiAdapter(private val listpegawai: ArrayList<ModelPegawai>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listpegawai[position]
 
-        holder.tvCardPegawaiId.text = item.idPegawai
-        holder.tvnamapegawai.text = item.namaPegawai
-        holder.tvalamatpegawai.text = item.alamatPegawai
-        holder.tvnohppegawai.text = item.noHPPegawai
+        holder.tvCardPegawaiId.text = "ID Pegawai  : ${item.idPegawai}"
+        holder.tvnamapegawai.text = "Nama  : ${item.namaPegawai}"
+        holder.tvalamatpegawai.text = "Alamat  : ${item.alamatPegawai}"
+        holder.tvnohppegawai.text = "Telepon  : ${item.noHPPegawai}"
+        holder.tvcabangpegawai.text = "Cabang  : ${item.cabangPegawai}"
         holder.tvterdaftarpegawai.text = item.terdaftar
         holder.cardpegawai.setOnClickListener {
         }
@@ -47,6 +48,7 @@ class DataPegawaiAdapter(private val listpegawai: ArrayList<ModelPegawai>) :
         val tvnamapegawai: TextView = itemView.findViewById(R.id.tvnamapegawai)
         val tvnohppegawai: TextView = itemView.findViewById(R.id.tvnohppegawai)
         val tvalamatpegawai: TextView = itemView.findViewById(R.id.tvalamatpegawai)
+        val tvcabangpegawai: TextView = itemView.findViewById(R.id.tvcabangpegawai)
         val tvterdaftarpegawai: TextView = itemView.findViewById(R.id.tvterdaftarpegawai)
         val btHubungipegawai: Button = itemView.findViewById(R.id.btHubungipegawai)
         val btLihatpegawai: Button = itemView.findViewById(R.id.btLihatpegawai)

@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tvnamapelanggan"
+            android:textStyle="bold"
             android:paddingStart="10dp"
             android:paddingTop="10dp"/>
         <TextView
@@ -61,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btHubungipelanggan"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 android:backgroundTint="#4B76CC"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="5dp"/>
@@ -70,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btLihatpelanggan"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 android:backgroundTint="#CC4B7F"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"/>

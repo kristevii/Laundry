@@ -52,17 +52,17 @@
     <string name="validasi_noHP_pelanggan">Phone number cannot be empty</string>
     <string name="validasi_cabang_pelanggan">Branches cannot be empty</string>
     <string name="sukses_simpan_pelanggan">Success in saving customers</string>
-    <string name="gagal_simpan_pelanggan">Failed to save client</string>
+    <string name="gagal_simpan_pelanggan">Failed to save customers</string>
     <string name="validasi_nama_pegawai">Name cannot be empty</string>
     <string name="validasi_alamat_pegawai">Address cannot be empty</string>
     <string name="validasi_noHP_pegawai">Phone number cannot be empty</string>
     <string name="validasi_cabang_pegawai">Branch cannot be empty</string>
     <string name="sukses_simpan_pegawai">Success in saving employee</string>
     <string name="gagal_simpan_pegawai">Failed to save employee</string>
-    <string name="sukses_simpan_cabang">ff</string>
-    <string name="gagal_simpan_cabang">ff</string>
-    <string name="validasi_nama_cabang">ff</string>
-    <string name="validasi_alamat_cabang">ff</string>
-    <string name="validasi_noHP_cabang">ff</string>
-    <string name="validasi_layanan_cabang">ffff</string>
+    <string name="sukses_simpan_cabang">Success in saving branch</string>
+    <string name="gagal_simpan_cabang">Failed to save branch</string>
+    <string name="validasi_nama_cabang">Name cannot be empty</string>
+    <string name="validasi_alamat_cabang">Address cannot be empty</string>
+    <string name="validasi_noHP_cabang">Phone cannot be empty</string>
+    <string name="validasi_layanan_cabang">Service cannot be empty</string>
 </resources>

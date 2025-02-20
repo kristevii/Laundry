@@ -97,7 +97,7 @@
         android:background="@drawable/radius"
         android:hint="@string/etNoHpaddpegawai"
         android:inputType="phone"
-        android:maxLength="14"
+        android:maxLength="13"
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"

@@ -12,6 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
 import com.kristevi.laundry.R
 import com.kristevi.laundry.ModelData.ModelPegawai
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class TambahPegawaiActivity : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -60,13 +63,16 @@ class TambahPegawaiActivity : AppCompatActivity() {
     fun simpan(){
         val pegawaiBaru = myRef.push()
         val idPegawai = pegawaiBaru.key
+        val currrentTime = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.getDefault()).format(
+            Date()
+        )
         val data = ModelPegawai(
             idPegawai.toString(),
             etNameaddpegawai.text.toString(),
             etAlamataddpegawai.text.toString(),
             etNoHpaddpegawai.text.toString(),
             etCabangaddpegawai.text.toString(),
-            "timestamp"
+            currrentTime
         )
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {

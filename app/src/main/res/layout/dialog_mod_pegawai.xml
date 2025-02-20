@@ -20,10 +20,10 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/tvdetailpelangggan"
+                    android:id="@+id/tvdetailpegawai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Detail Pelanggan"
+                    android:text="Detail Pegawai"
                     android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:paddingStart="10dp"
@@ -40,16 +40,16 @@
                     android:paddingBottom="5dp"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/tvidpelanggan"
+                        android:id="@+id/tvidpegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ID Pelanggan"
+                        android:text="ID Pegawai"
                         android:layout_weight="1.35"/>
                     <TextView
-                        android:id="@+id/tvisiidpelanggan"
+                        android:id="@+id/tvisiidpegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ID Pelanggan"
+                        android:text="ID Pegawai"
                         android:textStyle="bold"
                         android:gravity="end"
                         android:layout_weight="1.35"/>
@@ -63,63 +63,16 @@
                     android:paddingBottom="5dp"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/tvnamapelanggan"
+                        android:id="@+id/tvnamapegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nama Pelanggan"
+                        android:text="Nama Pegawai"
                         android:layout_weight="1.35"/>
                     <TextView
-                        android:id="@+id/tvisinamapelanggan"
+                        android:id="@+id/tvisinamapegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nama Pelanggan"
-                        android:textStyle="bold"
-                        android:gravity="end"
-                        android:layout_weight="1.35"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#DCDCDC"
-                    android:paddingTop="5dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tvalamatpelanggan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Alamat"
-                        android:layout_weight="1.35"/>
-                    <TextView
-                        android:id="@+id/tvisialamatpelanggan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Alamat"
-                        android:textStyle="bold"
-                        android:gravity="end"
-                        android:layout_weight="1.35"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tvnohppelanggan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No HP"
-                        android:layout_weight="1.35"/>
-                    <TextView
-                        android:id="@+id/tvisinohppelanggan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No HP"
+                        android:text="Nama Pegawai"
                         android:textStyle="bold"
                         android:gravity="end"
                         android:layout_weight="1.35"/>
@@ -134,13 +87,60 @@
                     android:paddingBottom="5dp"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/tvcabangpelanggan"
+                        android:id="@+id/tvalamatpegawai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvisialamatpegawai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_weight="1.35"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvnohppegawai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No HP"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvisinohppegawai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No HP"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_weight="1.35"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DCDCDC"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvcabangpegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cabang"
                         android:layout_weight="1.35"/>
                     <TextView
-                        android:id="@+id/tvisicabangpelanggan"
+                        android:id="@+id/tvisicabangpegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cabang"
@@ -157,13 +157,13 @@
                     android:paddingBottom="5dp"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/tvterdaftarpelanggan"
+                        android:id="@+id/tvterdaftarpegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Terdaftar"
                         android:layout_weight="1.35"/>
                     <TextView
-                        android:id="@+id/tvisiterdaftarpelanggan"
+                        android:id="@+id/tvisiterdaftarpegawai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Terdaftar"
@@ -179,7 +179,7 @@
                     android:paddingEnd="10dp"
                     android:paddingBottom="5dp">
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/buttonsuntingpelanggan"
+                        android:id="@+id/buttonsuntingpegawai"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_marginEnd="3dp"
@@ -189,10 +189,10 @@
                         android:backgroundTint="#67CCA5"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/buttonhapuspelanggan"
+                        app:layout_constraintEnd_toStartOf="@+id/buttonhapuspegawai"
                         app:layout_constraintTop_toTopOf="parent"/>
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/buttonhapuspelanggan"
+                        android:id="@+id/buttonhapuspegawai"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_marginEnd="3dp"
@@ -202,7 +202,7 @@
                         android:backgroundTint="#C84040"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/buttonsuntingpelanggan"
+                        app:layout_constraintStart_toEndOf="@+id/buttonsuntingpegawai"
                         app:layout_constraintTop_toTopOf="parent"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>

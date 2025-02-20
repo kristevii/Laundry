@@ -29,7 +29,7 @@ class DataPelangganAdapter (
         val item = listpelanggan[position]
         holder.tvCardPelangganId.text = "Id Pelanggan : ${item.idPelanggan}"
         holder.tvnamapelanggan.text = "Nama     : ${item.namaPelanggan}"
-        holder.tvalamatpelanggan.text = "Alamat     : ${item.alamatPelanggan}"
+        holder.tvalamatpelanggan.text = "Alamat    : ${item.alamatPelanggan}"
         holder.tvnohppelanggan.text = "Telepon  : ${item.noHPPelanggan}"
         holder.tvterdaftarpelanggan.text = item.terdaftar
         holder.cardpelanggan.setOnClickListener {

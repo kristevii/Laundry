@@ -24,10 +24,10 @@ class DataCabangAdapter(private val listcabang: ArrayList<ModelCabang>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listcabang[position]
 
-        holder.tvcardidcabang.text = item.idCabang
+        holder.tvcardidcabang.text = "ID Cabang : ${item.idCabang}"
         holder.tvnamacabang.text = item.namaCabang
-        holder.tvalamatcabang.text = item.alamatCabang
-        holder.tvteleponcabang.text = item.noHPCabang
+        holder.tvalamatcabang.text = "Alamat : ${item.alamatCabang}"
+        holder.tvteleponcabang.text = "Telepon  : ${item.noHPCabang}"
         holder.cardcabang.setOnClickListener {
         }
         holder.btHubungicabang.setOnClickListener {
