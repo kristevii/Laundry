@@ -19,8 +19,10 @@ import com.kristevi.laundry.R
 import com.kristevi.laundry.adapter.DataTambahanAdapter
 
 class DataTambahanActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("tambahan")
+
     lateinit var rvDataTambahan : RecyclerView
     lateinit var fabTambahTambahan : FloatingActionButton
     lateinit var listtambahan: ArrayList<ModelTambahan>
@@ -44,6 +46,10 @@ class DataTambahanActivity : AppCompatActivity() {
         val fabTambahTambahan : FloatingActionButton = findViewById(R.id.fabTambahTambahan)
         fabTambahTambahan.setOnClickListener {
             val intent = Intent(this, TambahTambahanActivity::class.java)
+            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdtambahan)))
+            intent.putExtra("idTambahan", "")
+            intent.putExtra("namaTambahan", "")
+            intent.putExtra("hargaTambahan", "")
             startActivity(intent)
         }
 

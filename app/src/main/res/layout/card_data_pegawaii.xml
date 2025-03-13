@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/tvnamapegawai"
             android:textStyle="bold"
+            android:textSize="15sp"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:paddingStart="10dp"
             android:paddingTop="10dp"/>

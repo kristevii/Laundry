@@ -19,8 +19,10 @@ import com.kristevi.laundry.R
 import com.kristevi.laundry.adapter.DataPegawaiAdapter
 
 class DataPegawaiActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pegawai")
+
     lateinit var rvDataPegawai : RecyclerView
     lateinit var fabTambahPegawai : FloatingActionButton
     lateinit var listpegawai: ArrayList<ModelPegawai>
@@ -44,6 +46,12 @@ class DataPegawaiActivity : AppCompatActivity() {
         val fabTambahPegawai : FloatingActionButton = findViewById(R.id.fabTambahPegawai)
         fabTambahPegawai.setOnClickListener {
             val intent = Intent(this, TambahPegawaiActivity::class.java)
+            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdpegawai)))
+            intent.putExtra("idPegawai", "")
+            intent.putExtra("namaPegawai", "")
+            intent.putExtra("noHPPegawai", "")
+            intent.putExtra("alamatPegawai", "")
+            intent.putExtra("cabangPegawai", "")
             startActivity(intent)
         }
 

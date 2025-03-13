@@ -18,10 +18,13 @@ import com.kristevi.laundry.ModelData.ModelLayanan
 import com.kristevi.laundry.R
 import com.kristevi.laundry.adapter.DataLayananAdapter
 import com.kristevi.laundry.layanan.TambahLayananActivity
+import com.kristevi.laundry.pegawai.TambahPegawaiActivity
 
 class DataLayananActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("layanan")
+
     lateinit var rvDataLayanan : RecyclerView
     lateinit var fabTambahLayanan : FloatingActionButton
     lateinit var listlayanan: ArrayList<ModelLayanan>
@@ -42,9 +45,14 @@ class DataLayananActivity : AppCompatActivity() {
 
         getData()
 
-        val fabTambahPegawai : FloatingActionButton = findViewById(R.id.fabTambahLayanan)
-        fabTambahPegawai.setOnClickListener {
+        val fabTambahLayanan : FloatingActionButton = findViewById(R.id.fabTambahLayanan)
+        fabTambahLayanan.setOnClickListener {
             val intent = Intent(this, TambahLayananActivity::class.java)
+            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdpegawai)))
+            intent.putExtra("idLayanan", "")
+            intent.putExtra("namaLayanan", "")
+            intent.putExtra("hargaLayanan", "")
+            intent.putExtra("cabangLayanan", "")
             startActivity(intent)
         }
 

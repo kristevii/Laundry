@@ -1,5 +1,7 @@
 package com.kristevi.laundry.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,15 +11,25 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.google.firebase.database.DatabaseReference
 import com.kristevi.laundry.R
 import com.kristevi.laundry.ModelData.ModelLayanan
+import com.kristevi.laundry.layanan.TambahLayananActivity
+import com.kristevi.laundry.pegawai.TambahPegawaiActivity
 
 class DataLayananAdapter(private val listlayanan: ArrayList<ModelLayanan>) :
     RecyclerView.Adapter<DataLayananAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    lateinit var appContext : Context
+    lateinit var databaseReference: DatabaseReference
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_data_layanann, parent, false)
+        appContext = parent.context
         return ViewHolder(view)
     }
 
@@ -29,6 +41,13 @@ class DataLayananAdapter(private val listlayanan: ArrayList<ModelLayanan>) :
         holder.tvhargalayanan.text = "Harga : Rp. ${item.hargaLayanan}"
         holder.tvcabanglayanan.text = "Cabang : ${item.cabangLayanan}"
         holder.cardlayanan.setOnClickListener {
+            val intent = Intent(appContext, TambahLayananActivity::class.java)
+            intent.putExtra("judul",  "Edit Layanan")
+            intent.putExtra("idLayanan", item.idLayanan)
+            intent.putExtra("namaLayanan", item.namaLayanan)
+            intent.putExtra("hargaLayanan", item.hargaLayanan)
+            intent.putExtra("cabangLayanan", item.cabangLayanan)
+            appContext.startActivity(intent)
         }
     }
 

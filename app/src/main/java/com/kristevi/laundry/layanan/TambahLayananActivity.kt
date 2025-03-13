@@ -11,11 +11,17 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
 import com.kristevi.laundry.ModelData.ModelLayanan
+import com.kristevi.laundry.ModelData.ModelPegawai
 import com.kristevi.laundry.R
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class TambahLayananActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("layanan")
+
     lateinit var tvjuduladdlayanan : TextView
     lateinit var tvaddlayanan : TextView
     lateinit var etaddLayanan : EditText
@@ -25,13 +31,15 @@ class TambahLayananActivity : AppCompatActivity() {
     lateinit var etcabangaddlayanan : EditText
     lateinit var buttonaddlayanan : Button
 
+    var idLayanan : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_layanan)
 
         init()
-        // getData()
+        getData()
         buttonaddlayanan.setOnClickListener{
             cekValidasi()
         }
@@ -52,6 +60,61 @@ class TambahLayananActivity : AppCompatActivity() {
         etcabangaddlayanan = findViewById(R.id.etcabangaddlayanan)
         buttonaddlayanan = findViewById(R.id.buttonaddlayanan)
     }
+
+    fun getData() {
+        idLayanan = intent.getStringExtra("idLayanan").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaLayanan")
+        val harga = intent.getStringExtra("hargaLayanan")
+        val cabang = intent.getStringExtra("cabangLayanan")
+        tvjuduladdlayanan.text = judul
+        etaddLayanan.setText(nama)
+        ethargaaddlayanan.setText(harga)
+        etcabangaddlayanan.setText(cabang)
+        if (!tvjuduladdlayanan.text.equals(this.getString(R.string.tvjuduladdlayanan))) {
+            if (judul.equals("Edit Layanan")) {
+                mati()
+                buttonaddlayanan.text = "Sunting"
+            }
+        } else {
+            hidup()
+            etaddLayanan.requestFocus()
+            buttonaddlayanan.text = "Simpan"
+        }
+    }
+
+    fun mati() {
+        etaddLayanan.isEnabled = false
+        ethargaaddlayanan.isEnabled = false
+        etcabangaddlayanan.isEnabled = false
+    }
+
+    fun hidup() {
+        etaddLayanan.isEnabled = true
+        ethargaaddlayanan.isEnabled = true
+        etcabangaddlayanan.isEnabled = true
+    }
+
+    fun update() {
+        val layananRef = database.getReference("layanan").child(idLayanan)
+        val data = ModelLayanan(
+            idLayanan,
+            etaddLayanan.text.toString(),
+            ethargaaddlayanan.text.toString(),
+            etcabangaddlayanan.text.toString())
+        // map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaLayanan"] = data.namaLayanan.toString()
+        updateData["hargaLayanan"] = data.hargaLayanan.toString()
+        updateData["cabangLayanan"] = data.cabangLayanan.toString()
+        layananRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
+        }
+    }
+
     fun simpan(){
         val layananBaru = myRef.push()
         val idLayanan = layananBaru.key
@@ -95,6 +158,14 @@ class TambahLayananActivity : AppCompatActivity() {
             etcabangaddlayanan.requestFocus()
             return
         }
-        simpan()
+        if (buttonaddlayanan.text.equals("Simpan")) {
+            simpan()
+        } else if (buttonaddlayanan.text.equals("Sunting")) {
+            hidup()
+            etaddLayanan.requestFocus()
+            buttonaddlayanan.text = "Perbarui"
+        } else if (buttonaddlayanan.text.equals("Perbarui")) {
+            update()
+        }
     }
 }

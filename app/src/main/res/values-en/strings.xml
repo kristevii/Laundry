@@ -65,4 +65,27 @@
     <string name="validasi_alamat_cabang">Address cannot be empty</string>
     <string name="validasi_noHP_cabang">Phone cannot be empty</string>
     <string name="validasi_layanan_cabang">Service cannot be empty</string>
+    <string name="validasi_nama_layanan">Service name cannot be empty</string>
+    <string name="validasi_harga_layanan">The service price cannot be empty</string>
+    <string name="validasi_cabang_layanan">Branch cannot be empty</string>
+    <string name="sukses_simpan_layanan">Successful save service</string>
+    <string name="gagal_simpan_layanan">Failed to save service</string>
+    <string name="validasi_nama_tambahan">Additional names cannot be empty</string>
+    <string name="validasi_harga_tambahan">The additional price cannot be empty</string>
+    <string name="sukses_simpan_tambahan">Successful additional save</string>
+    <string name="gagal_simpan_tambahan">Additional save failed</string>
+    <string name="tvcardidlayanan">Service ID</string>
+    <string name="tvhargalayanan">Price</string>
+    <string name="tvcabanglayanan">Branch</string>
+    <string name="tvlayanancabang">Available services</string>
+    <string name="btHubungicabang">Contact</string>
+    <string name="btLihatcabang">Show</string>
+    <string name="tvcardidcabang">Branch ID</string>
+    <string name="tvalamatcabang">Address</string>
+    <string name="tvteleponcabang">Phone</string>
+    <string name="tvCardTambahanId">Addtional ID</string>
+    <string name="tvhargatambahan">Price</string>
+    <string name="tvjuduladdcabang">Add Branch</string>
+    <string name="tvjuduladdlayanan">Add Services</string>
+    <string name="tvjuduladdtambahan">Addition</string>
 </resources>

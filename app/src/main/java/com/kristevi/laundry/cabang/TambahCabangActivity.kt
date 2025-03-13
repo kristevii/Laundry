@@ -11,11 +11,17 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
 import com.kristevi.laundry.ModelData.ModelCabang
+import com.kristevi.laundry.ModelData.ModelPegawai
 import com.kristevi.laundry.R
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class TambahCabangActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("cabang")
+
     lateinit var tvjuduladdcabang : TextView
     lateinit var tvaddcabang : TextView
     lateinit var etaddCabang : EditText
@@ -27,13 +33,15 @@ class TambahCabangActivity : AppCompatActivity() {
     lateinit var etLayananaddcabang : EditText
     lateinit var buttonaddcabang : Button
 
+    var idCabang : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_cabang)
 
         init()
-        // getData()
+        getData()
         buttonaddcabang.setOnClickListener{
             cekValidasi()
         }
@@ -56,6 +64,67 @@ class TambahCabangActivity : AppCompatActivity() {
         etLayananaddcabang = findViewById(R.id.etLayananaddcabang)
         buttonaddcabang = findViewById(R.id.buttonaddcabang)
     }
+
+    fun getData() {
+        idCabang = intent.getStringExtra("idCabang").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaCabang")
+        val alamat = intent.getStringExtra("alamatCabang")
+        val nohp = intent.getStringExtra("noHPCabang")
+        val layanan = intent.getStringExtra("layananCabang")
+        tvjuduladdcabang.text = judul
+        etaddCabang.setText(nama)
+        etAlamataddcabang.setText(alamat)
+        etTeleponaddcabang.setText(nohp)
+        etLayananaddcabang.setText(layanan)
+        if (!tvjuduladdcabang.text.equals(this.getString(R.string.tvjuduladdcabang))) {
+            if (judul.equals("Edit Cabang")) {
+                mati()
+                buttonaddcabang.text = "Sunting"
+            }
+        } else {
+            hidup()
+            etaddCabang.requestFocus()
+            buttonaddcabang.text = "Simpan"
+        }
+    }
+
+    fun mati() {
+        etaddCabang.isEnabled = false
+        etAlamataddcabang.isEnabled = false
+        etTeleponaddcabang.isEnabled = false
+        etLayananaddcabang.isEnabled = false
+    }
+
+    fun hidup() {
+        etaddCabang.isEnabled = true
+        etAlamataddcabang.isEnabled = true
+        etTeleponaddcabang.isEnabled = true
+        etLayananaddcabang.isEnabled = true
+    }
+
+    fun update() {
+        val cabangRef = database.getReference("cabang").child(idCabang)
+        val data = ModelCabang(
+            idCabang,
+            etaddCabang.text.toString(),
+            etAlamataddcabang.text.toString(),
+            etTeleponaddcabang.text.toString(),
+            etLayananaddcabang.text.toString())
+        // map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaCabang"] = data.namaCabang.toString()
+        updateData["alamatCabang"] = data.alamatCabang.toString()
+        updateData["noHPCabang"] = data.noHPCabang.toString()
+        updateData["layananCabang"] = data.layananCabang.toString()
+        cabangRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
+        }
+    }
+
     fun simpan(){
         val cabangBaru = myRef.push()
         val idCabang = cabangBaru.key
@@ -106,6 +175,14 @@ class TambahCabangActivity : AppCompatActivity() {
             etLayananaddcabang.requestFocus()
             return
         }
-        simpan()
+        if (buttonaddcabang.text.equals("Simpan")) {
+            simpan()
+        } else if (buttonaddcabang.text.equals("Sunting")) {
+            hidup()
+            etaddCabang.requestFocus()
+            buttonaddcabang.text = "Perbarui"
+        } else if (buttonaddcabang.text.equals("Perbarui")) {
+            update()
+        }
     }
 }
