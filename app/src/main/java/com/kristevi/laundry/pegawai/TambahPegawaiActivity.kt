@@ -17,8 +17,10 @@ import java.util.Date
 import java.util.Locale
 
 class TambahPegawaiActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pegawai")
+
     lateinit var tvjuduladdpegawai : TextView
     lateinit var tvnamaaddpegawai : TextView
     lateinit var etNameaddpegawai : EditText
@@ -30,13 +32,15 @@ class TambahPegawaiActivity : AppCompatActivity() {
     lateinit var etCabangaddpegawai : EditText
     lateinit var buttonaddpegawai : Button
 
+    var idPegawai : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_pegawai)
 
         init()
-        // getData()
+        getData()
         buttonaddpegawai.setOnClickListener{
             cekValidasi()
         }
@@ -60,10 +64,74 @@ class TambahPegawaiActivity : AppCompatActivity() {
         buttonaddpegawai = findViewById(R.id.buttonaddpegawai)
     }
 
+    fun getData() {
+        idPegawai = intent.getStringExtra("idPegawai").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaPegawai")
+        val alamat = intent.getStringExtra("alamatPegawai")
+        val nohp = intent.getStringExtra("noHPPegawai")
+        val cabang = intent.getStringExtra("cabangPegawai")
+        tvjuduladdpegawai.text = judul
+        etNameaddpegawai.setText(nama)
+        etAlamataddpegawai.setText(alamat)
+        etNoHpaddpegawai.setText(nohp)
+        etCabangaddpegawai.setText(cabang)
+        if (!tvjuduladdpegawai.text.equals(this.getString(R.string.tvjuduladdpegawai))) {
+            if (judul.equals("Edit Pegawai")) {
+                mati()
+                buttonaddpegawai.text = "Sunting"
+            }
+        } else {
+            hidup()
+            etNameaddpegawai.requestFocus()
+            buttonaddpegawai.text = "Simpan"
+        }
+    }
+
+    fun mati() {
+        etNameaddpegawai.isEnabled = false
+        etAlamataddpegawai.isEnabled = false
+        etNoHpaddpegawai.isEnabled = false
+        etCabangaddpegawai.isEnabled = false
+    }
+
+    fun hidup() {
+        etNameaddpegawai.isEnabled = true
+        etAlamataddpegawai.isEnabled = true
+        etNoHpaddpegawai.isEnabled = true
+        etCabangaddpegawai.isEnabled = true
+    }
+
+    fun update() {
+        val pegawaiRef = database.getReference("pegawai").child(idPegawai)
+        val currentTime = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.getDefault()).format(
+            Date()
+        )
+        val data = ModelPegawai(
+            idPegawai,
+            etNameaddpegawai.text.toString(),
+            etAlamataddpegawai.text.toString(),
+            etNoHpaddpegawai.text.toString(),
+            etCabangaddpegawai.text.toString(),
+            currentTime)
+        // map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaPegawai"] = data.namaPegawai.toString()
+        updateData["alamatPegawai"] = data.alamatPegawai.toString()
+        updateData["noHPPegawai"] = data.noHPPegawai.toString()
+        updateData["cabangPegawai"] = data.cabangPegawai.toString()
+        pegawaiRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
+        }
+    }
+
     fun simpan(){
         val pegawaiBaru = myRef.push()
         val idPegawai = pegawaiBaru.key
-        val currrentTime = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.getDefault()).format(
+        val currentTime = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.getDefault()).format(
             Date()
         )
         val data = ModelPegawai(
@@ -72,7 +140,7 @@ class TambahPegawaiActivity : AppCompatActivity() {
             etAlamataddpegawai.text.toString(),
             etNoHpaddpegawai.text.toString(),
             etCabangaddpegawai.text.toString(),
-            currrentTime
+            currentTime
         )
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
@@ -114,6 +182,14 @@ class TambahPegawaiActivity : AppCompatActivity() {
             etCabangaddpegawai.requestFocus()
             return
         }
-        simpan()
+        if (buttonaddpegawai.text.equals("Simpan")) {
+            simpan()
+        } else if (buttonaddpegawai.text.equals("Sunting")) {
+            hidup()
+            etNameaddpegawai.requestFocus()
+            buttonaddpegawai.text = "Perbarui"
+        } else if (buttonaddpegawai.text.equals("Perbarui")) {
+            update()
+        }
     }
 }

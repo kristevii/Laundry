@@ -17,10 +17,13 @@ import com.google.firebase.database.ValueEventListener
 import com.kristevi.laundry.ModelData.ModelPelanggan
 import com.kristevi.laundry.R
 import com.kristevi.laundry.adapter.DataPelangganAdapter
+import com.kristevi.laundry.pegawai.TambahPegawaiActivity
 
 class DataPelangganActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pelanggan")
+
     lateinit var rvDataPelanggan : RecyclerView
     lateinit var fabTambahPelanggan : FloatingActionButton
     lateinit var listpelanggan: ArrayList<ModelPelanggan>
@@ -44,6 +47,12 @@ class DataPelangganActivity : AppCompatActivity() {
         val fabTambahPelanggan : FloatingActionButton = findViewById(R.id.fabTambahPelanggan)
         fabTambahPelanggan.setOnClickListener {
             val intent = Intent(this, TambahPelangganActivity::class.java)
+            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdpelanggan)))
+            intent.putExtra("idPelanggan", "")
+            intent.putExtra("namaPelanggan", "")
+            intent.putExtra("noHPPelanggan", "")
+            intent.putExtra("alamatPelanggan", "")
+            intent.putExtra("cabangPelanggan", "")
             startActivity(intent)
         }
 

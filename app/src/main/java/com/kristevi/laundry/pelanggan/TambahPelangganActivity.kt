@@ -17,8 +17,10 @@ import java.util.Date
 import java.util.Locale
 
 class TambahPelangganActivity : AppCompatActivity() {
+
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pelanggan")
+
     lateinit var tvjuduladdpelanggan : TextView
     lateinit var tvnamaaddpelanggan : TextView
     lateinit var etNameaddpelanggan : EditText
@@ -30,13 +32,15 @@ class TambahPelangganActivity : AppCompatActivity() {
     lateinit var etCabangaddpelanggan : EditText
     lateinit var buttonaddpelanggan : Button
 
+    var idPelanggan : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_pelanggan)
 
         init()
-        // getData()
+        getData()
         buttonaddpelanggan.setOnClickListener{
             cekValidasi()
         }
@@ -58,6 +62,70 @@ class TambahPelangganActivity : AppCompatActivity() {
         tvCabangaddpelanggan = findViewById(R.id.tvCabangaddpelanggan)
         etCabangaddpelanggan = findViewById(R.id.etCabangaddpelanggan)
         buttonaddpelanggan = findViewById(R.id.buttonaddpelanggan)
+    }
+
+    fun getData() {
+        idPelanggan = intent.getStringExtra("idPelanggan").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaPelanggan")
+        val alamat = intent.getStringExtra("alamatPelanggan")
+        val nohp = intent.getStringExtra("noHPPelanggan")
+        val cabang = intent.getStringExtra("cabangPelanggan")
+        tvjuduladdpelanggan.text = judul
+        etNameaddpelanggan.setText(nama)
+        etAlamataddpelanggan.setText(alamat)
+        etNoHpaddpelanggan.setText(nohp)
+        etCabangaddpelanggan.setText(cabang)
+        if (!tvjuduladdpelanggan.text.equals(this.getString(R.string.tvjuduladdpelanggan))) {
+            if (judul.equals("Edit Pelanggan")) {
+                mati()
+                buttonaddpelanggan.text = "Sunting"
+            }
+        } else {
+            hidup()
+            etNameaddpelanggan.requestFocus()
+            buttonaddpelanggan.text = "Simpan"
+        }
+    }
+
+    fun mati() {
+        etNameaddpelanggan.isEnabled = false
+        etAlamataddpelanggan.isEnabled = false
+        etNoHpaddpelanggan.isEnabled = false
+        etCabangaddpelanggan.isEnabled = false
+    }
+
+    fun hidup() {
+        etNameaddpelanggan.isEnabled = true
+        etAlamataddpelanggan.isEnabled = true
+        etNoHpaddpelanggan.isEnabled = true
+        etCabangaddpelanggan.isEnabled = true
+    }
+
+    fun update() {
+        val pelangganRef = database.getReference("pelanggan").child(idPelanggan)
+        val currentTime = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.getDefault()).format(
+            Date()
+        )
+        val data = ModelPelanggan(
+            idPelanggan,
+            etNameaddpelanggan.text.toString(),
+            etAlamataddpelanggan.text.toString(),
+            etNoHpaddpelanggan.text.toString(),
+            etCabangaddpelanggan.text.toString(),
+            currentTime)
+        // map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaPelanggan"] = data.namaPelanggan.toString()
+        updateData["alamatPelanggan"] = data.alamatPelanggan.toString()
+        updateData["noHPPelanggan"] = data.noHPPelanggan.toString()
+        updateData["cabangPelanggan"] = data.cabangPelanggan.toString()
+        pelangganRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun simpan(){
@@ -112,6 +180,14 @@ class TambahPelangganActivity : AppCompatActivity() {
             etCabangaddpelanggan.requestFocus()
             return
         }
-        simpan()
+        if (buttonaddpelanggan.text.equals("Simpan")) {
+            simpan()
+        } else if (buttonaddpelanggan.text.equals("Sunting")) {
+            hidup()
+            etNameaddpelanggan.requestFocus()
+            buttonaddpelanggan.text = "Perbarui"
+        } else if (buttonaddpelanggan.text.equals("Perbarui")) {
+            update()
+        }
     }
 }

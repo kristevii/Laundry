@@ -19,6 +19,7 @@ import com.kristevi.laundry.ModelData.ModelPegawai
 import com.kristevi.laundry.R
 import com.kristevi.laundry.adapter.DataCabangAdapter
 import com.kristevi.laundry.adapter.DataPegawaiAdapter
+import com.kristevi.laundry.pegawai.TambahPegawaiActivity
 
 class DataCabangActivity : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -43,9 +44,15 @@ class DataCabangActivity : AppCompatActivity() {
 
         getData()
 
-        val fabTambahPegawai : FloatingActionButton = findViewById(R.id.fabTambahCabang)
-        fabTambahPegawai.setOnClickListener {
+        val fabTambahCabang : FloatingActionButton = findViewById(R.id.fabTambahCabang)
+        fabTambahCabang.setOnClickListener {
             val intent = Intent(this, TambahCabangActivity::class.java)
+            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdcabang)))
+            intent.putExtra("idCabang", "")
+            intent.putExtra("namaCabang", "")
+            intent.putExtra("noHPCabang", "")
+            intent.putExtra("alamatCabang", "")
+            intent.putExtra("layananCabang", "")
             startActivity(intent)
         }
 

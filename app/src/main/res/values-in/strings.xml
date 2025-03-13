@@ -39,7 +39,7 @@
     <string name="tvimg1dash">Transaksi</string>
     <string name="tvimg2dash">Pelanggan</string>
     <string name="tvimg3dash">Laporan</string>
-    <string name="tvdesc">Siap melayani pelanggan dengan sepenuh hati</string>
+    <string name="tvdesc">Siap melayani pelanggan dengan setulus hati</string>
     <string name="tvpesan">Jangan kecewakan pelanggan</string>
     <string name="tvcard2dash">Akun</string>
     <string name="tvcard3dash">Layanan</string>
@@ -74,4 +74,20 @@
     <string name="validasi_harga_tambahan">Harga tambahan tidak boleh kosong</string>
     <string name="sukses_simpan_tambahan">Sukses simpan tambahan</string>
     <string name="gagal_simpan_tambahan">Gagal simpan tambahan</string>
+    <string name="tvcardidlayanan">ID Layanan</string>
+    <string name="tvhargalayanan">Harga</string>
+    <string name="tvcabanglayanan">Cabang</string>
+    <string name="tvcardidcabang">ID Cabang</string>
+    <string name="tvalamatcabang">Alamat</string>
+    <string name="tvteleponcabang">Telepon</string>
+    <string name="tvlayanancabang">Layanan yang tersedia</string>
+    <string name="btHubungicabang">Hubungi</string>
+    <string name="btLihatcabang">Lihat</string>
+    <string name="tvCardTambahanId">ID Tambahan</string>
+    <string name="tvhargatambahan">Harga</string>
+    <string name="Data_Pegawai_Gagal_Diperbarui">Data Pegawai Gagal Diperbarui</string>
+    <string name="Data_Pegawai_Berhasil_Diperbarui">Data Pegawai Berhasil Diperbarui</string>
+    <string name="tvjuduladdcabang">Tambah Cabang</string>
+    <string name="tvjuduladdlayanan">Tambah Layanan</string>
+    <string name="tvjuduladdtambahan">Tambahan</string>
 </resources>

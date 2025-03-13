@@ -15,7 +15,7 @@
             android:id="@+id/tvcardidlayanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID Layanan"
+            android:text="@string/tvcardidlayanan"
             android:textStyle="bold"
             android:background="#75A0CA"
             android:paddingStart="10dp"
@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nama Layanan"
+            android:textSize="15sp"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textStyle="bold"
             android:paddingStart="10dp"
@@ -34,14 +35,14 @@
             android:id="@+id/tvhargalayanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Harga"
+            android:text="@string/tvhargalayanan"
             android:paddingStart="10dp"
             android:paddingTop="5dp" />
         <TextView
             android:id="@+id/tvcabanglayanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Cabang"
+            android:text="@string/tvcabanglayanan"
             android:paddingStart="10dp"
             android:paddingTop="5dp"
             android:paddingBottom="10dp"/>

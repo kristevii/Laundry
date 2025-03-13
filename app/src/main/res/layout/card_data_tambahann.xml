@@ -15,7 +15,7 @@
             android:id="@+id/tvCardTambahanId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID Tambahan"
+            android:text="@string/tvCardTambahanId"
             android:textStyle="bold"
             android:background="#75A0CA"
             android:paddingStart="10dp"
@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Nama Tambahan"
             android:textStyle="bold"
+            android:textSize="15sp"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:paddingStart="10dp"
             android:paddingTop="10dp"/>
@@ -34,7 +35,7 @@
             android:id="@+id/tvhargatambahan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Harga"
+            android:text="@string/tvhargatambahan"
             android:paddingStart="10dp"
             android:paddingTop="5dp"
             android:paddingBottom="10dp"/>
