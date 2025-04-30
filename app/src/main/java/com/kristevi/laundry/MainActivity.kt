@@ -13,7 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kristevi.laundry.akun.AkunActivity
 import com.kristevi.laundry.cabang.DataCabangActivity
-import com.kristevi.laundry.laporan.LaporanActivity
+import com.kristevi.laundry.laporan.DataLaporanActivity
 import com.kristevi.laundry.layanan.DataLayananActivity
 import com.kristevi.laundry.pegawai.DataPegawaiActivity
 import com.kristevi.laundry.pelanggan.DataPelangganActivity
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
         val laporan : LinearLayout = findViewById(R.id.laporan)
         laporan.setOnClickListener {
-            val intent = Intent(this, LaporanActivity::class.java)
+            val intent = Intent(this, DataLaporanActivity::class.java)
             startActivity(intent)
         }
         val card2 : CardView = findViewById(R.id.card2)
