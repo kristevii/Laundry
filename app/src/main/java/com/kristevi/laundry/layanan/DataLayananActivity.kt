@@ -48,7 +48,7 @@ class DataLayananActivity : AppCompatActivity() {
         val fabTambahLayanan : FloatingActionButton = findViewById(R.id.fabTambahLayanan)
         fabTambahLayanan.setOnClickListener {
             val intent = Intent(this, TambahLayananActivity::class.java)
-            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdpegawai)))
+            intent.putExtra("judul",  (this.getString(R.string.tvjuduladdlayanan)))
             intent.putExtra("idLayanan", "")
             intent.putExtra("namaLayanan", "")
             intent.putExtra("hargaLayanan", "")

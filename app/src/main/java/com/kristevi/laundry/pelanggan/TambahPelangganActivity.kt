@@ -77,14 +77,14 @@ class TambahPelangganActivity : AppCompatActivity() {
         etNoHpaddpelanggan.setText(nohp)
         etCabangaddpelanggan.setText(cabang)
         if (!tvjuduladdpelanggan.text.equals(this.getString(R.string.tvjuduladdpelanggan))) {
-            if (judul.equals("Edit Pelanggan")) {
+            if (judul == getString(R.string.tvjuduleditpelanggan)) {
                 mati()
-                buttonaddpelanggan.text = "Sunting"
+                buttonaddpelanggan.text = getString(R.string.sunting)
             }
         } else {
             hidup()
             etNameaddpelanggan.requestFocus()
-            buttonaddpelanggan.text = "Simpan"
+            buttonaddpelanggan.text = getString(R.string.simpan)
         }
     }
 
@@ -180,13 +180,13 @@ class TambahPelangganActivity : AppCompatActivity() {
             etCabangaddpelanggan.requestFocus()
             return
         }
-        if (buttonaddpelanggan.text.equals("Simpan")) {
+        if (buttonaddpelanggan.text.equals(getString(R.string.simpan))) {
             simpan()
-        } else if (buttonaddpelanggan.text.equals("Sunting")) {
+        } else if (buttonaddpelanggan.text.equals(getString(R.string.sunting))) {
             hidup()
             etNameaddpelanggan.requestFocus()
-            buttonaddpelanggan.text = "Perbarui"
-        } else if (buttonaddpelanggan.text.equals("Perbarui")) {
+            buttonaddpelanggan.text = getString(R.string.perbarui)
+        } else if (buttonaddpelanggan.text.equals(getString(R.string.perbarui))) {
             update()
         }
     }

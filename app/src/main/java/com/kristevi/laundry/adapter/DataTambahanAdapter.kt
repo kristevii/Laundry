@@ -36,12 +36,12 @@ class DataTambahanAdapter(private val listtambahan: ArrayList<ModelTambahan>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listtambahan[position]
 
-        holder.tvCardTambahanId.text = "ID Tambahan : ${item.idTambahan}"
+        holder.tvCardTambahanId.text = appContext.getString(R.string.idtambahan, item.idTambahan)
         holder.tvnamatambahan.text = item.namaTambahan
-        holder.tvhargatambahan.text = "Harga : Rp. ${item.hargaTambahan}"
+        holder.tvhargatambahan.text = appContext.getString(R.string.harga, item.hargaTambahan)
         holder.cardtambahan.setOnClickListener {
             val intent = Intent(appContext, TambahTambahanActivity::class.java)
-            intent.putExtra("judul",  "Edit Tambahan")
+            intent.putExtra("judul",  appContext.getString(R.string.tvjuduledittambahan))
             intent.putExtra("idTambahan", item.idTambahan)
             intent.putExtra("namaTambahan", item.namaTambahan)
             intent.putExtra("hargaTambahan", item.hargaTambahan)

@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
-    tools:context=".transaksi.TransaksiActivity">
+    tools:context=".transaksi.TransaksiiActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card1transaksi"
@@ -19,70 +18,82 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tvdatapelanggantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data Pelanggan"
+                android:text="@string/tvdatapelanggantransaksi"
                 android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textSize="20sp"/>
             <TextView
                 android:id="@+id/tvnamapelanggantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Nama Pelanggan"
+                android:layout_marginTop="10sp"
+                android:text="@string/tvnamapelanggantransaksi"
                 android:textSize="15sp"/>
             <TextView
                 android:id="@+id/tvnohppelanggantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="No HP"
+                android:text="@string/tvnohppelanggantransaksi"
                 android:textSize="15sp"/>
             <Button
                 android:id="@+id/btnpilihpelanggantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Pilih Pelanggan"
-                android:textStyle="bold"/>
+                android:layout_marginTop="10sp"
+                android:text="@string/btnpilihpelanggantransaksi"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#254D70"/>
             <TextView
                 android:id="@+id/tvdatalayanantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Layanan Utama"
+                android:text="@string/tvdatalayanantransaksi"
                 android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textSize="20sp"/>
             <TextView
                 android:id="@+id/tvnamalayanantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Nama Layanan"
+                android:layout_marginTop="10sp"
+                android:text="@string/tvnamalayanantransaksi"
                 android:textSize="15sp"/>
             <TextView
                 android:id="@+id/tvhargalayanantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Harga"
+                android:text="@string/tvhargalayanantransaksi"
                 android:textSize="15sp"/>
             <Button
                 android:id="@+id/btnpilihlayanantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Pilih Layanan"
-                android:textStyle="bold"/>
+                android:layout_marginTop="10sp"
+                android:text="@string/btnpilihlayanantransaksi"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#254D70"/>
             <TextView
+                android:id="@+id/tvlayanantambahantransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Layanan Tambahan"
+                android:text="@string/tvlayanantambahantransaksi"
                 android:textSize="20sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textStyle="bold"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -95,8 +106,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvlayananTambahan"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -107,30 +121,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/nestedscrollview"
+        android:layout_marginTop="10sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingEnd="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="20dp">
             <Button
                 android:id="@+id/btntambahantransaksi"
-                android:layout_width="190dp"
+                android:layout_width="182dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="Tambahan"
-                android:textStyle="bold"/>
+                app:layout_constraintEnd_toStartOf="@+id/btnprosestransaksi"
+                android:text="@string/btntambahantransaksi"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#131D4F" />
             <Button
                 android:id="@+id/btnprosestransaksi"
-                android:layout_width="190dp"
+                android:layout_width="182dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="Proses"
-                android:textStyle="bold"/>
+                app:layout_constraintStart_toEndOf="@+id/btntambahantransaksi"
+                android:text="@string/btnprosestransaksi"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#954C2E" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

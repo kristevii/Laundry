@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context=".cabang.TambahCabangActivity">
+
+    <TextView
+        android:id="@+id/tvjuduladdcabang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Cabang"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvjuduladdcabang">
+        <LinearLayout
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvaddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Cabang"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/etaddCabang"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius"
+                android:hint="Masukan Nama Cabang"
+                android:inputType="none"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp" />
+            <TextView
+                android:id="@+id/tvalamataddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/etAlamataddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius"
+                android:hint="Masukan Alamat"
+                android:inputType="none"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp" />
+            <TextView
+                android:id="@+id/tvTeleponaddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telepon"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/etTeleponaddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius"
+                android:hint="Masukan Nomor Telepon"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvLayananaddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Layanan"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/etLayananaddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius"
+                android:hint="Masukan Layanan yang tersedia"
+                android:inputType="none"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp" />
+            <Button
+                android:id="@+id/buttonaddcabang"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Simpan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#254D70"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

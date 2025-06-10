@@ -138,7 +138,7 @@
         android:text="@string/buttonaddpelanggan"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:backgroundTint="#3272BF"
+        android:backgroundTint="#254D70"
         android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"

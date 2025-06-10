@@ -1,6 +1,8 @@
 package com.kristevi.laundry.pelanggan
 
+import android.app.ActivityOptions
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardpilihtambahan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:id="@+id/tvhargapilihtambahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvCardPilihTambahanId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCardTambahanId"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="#131D4F"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"/>
+        <TextView
+            android:id="@+id/tvnamapilihtambahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Tambahan"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

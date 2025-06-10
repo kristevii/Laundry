@@ -66,14 +66,14 @@ class TambahTambahanActivity : AppCompatActivity() {
         etNameaddtambahan.setText(nama)
         ethargaaddtambahan.setText(harga)
         if (!tvjuduladdtambahan.text.equals(this.getString(R.string.tvjuduladdtambahan))) {
-            if (judul.equals("Edit Tambahan")) {
+            if (judul == getString(R.string.tvjuduledittambahan)) {
                 mati()
-                buttonaddtambahan.text = "Sunting"
+                buttonaddtambahan.text = getString(R.string.sunting)
             }
         } else {
             hidup()
             etNameaddtambahan.requestFocus()
-            buttonaddtambahan.text = "Simpan"
+            buttonaddtambahan.text = getString(R.string.simpan)
         }
     }
 
@@ -140,13 +140,13 @@ class TambahTambahanActivity : AppCompatActivity() {
             ethargaaddtambahan.requestFocus()
             return
         }
-        if (buttonaddtambahan.text.equals("Simpan")) {
+        if (buttonaddtambahan.text.equals(getString(R.string.simpan))) {
             simpan()
-        } else if (buttonaddtambahan.text.equals("Sunting")) {
+        } else if (buttonaddtambahan.text.equals(getString(R.string.sunting))) {
             hidup()
             etNameaddtambahan.requestFocus()
-            buttonaddtambahan.text = "Perbarui"
-        } else if (buttonaddtambahan.text.equals("Perbarui")) {
+            buttonaddtambahan.text = getString(R.string.perbarui)
+        } else if (buttonaddtambahan.text.equals(getString(R.string.perbarui))) {
             update()
         }
     }
