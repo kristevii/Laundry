@@ -4,79 +4,43 @@
     <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun1.jpg" width="200"><br>Profile</td>
     <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun2.jpg" width="200"><br>Informasi Pengguna</td>
     <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun3.jpg" width="200"><br>Edit Data Pengguna</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun4.jpg" width="200"><br>Keluar dari Akun</td>
   </tr>
   <tr>
-    <td><img src="URL5" width="200"><br>Caption 5</td>
-    <td><img src="URL6" width="200"><br>Caption 6</td>
-    <td><img src="URL7" width="200"><br>Caption 7</td>
-    <td><img src="URL8" width="200"><br>Caption 8</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi1.jpg" width="200"><br>Transaksi</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi2.jpg" width="200"><br>Konfirmasi Data Transaksi</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi3.jpg" width="200"><br>Metode PembayaranTransaksi</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi4.jpg" width="200"><br>Nota Transaksi</td>
   </tr>
-  <!-- Tambah baris lagi jika perlu -->
+  <tr>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/datapelanggan.jpg" width="200"><br>Data Pelanggan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/detailpelanggan.jpg" width="200"><br>Detail Data Pelanggan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/hapuspelanggan.jpg" width="200"><br>Hapus Data Pelanggan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/tambahpelanggan.jpg" width="200"><br>Tambah Data Pelanggan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/editpelanggan.jpg" width="200"><br>Edit Data Pelanggan</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/laporan.jpg" width="200"><br>Data Laporan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/laporan2.jpg" width="200"><br>Pembayaran di Laporan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/datalayanan.jpg" width="200"><br>Data Layanan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/editlayanan.jpg" width="200"><br>Edit Data Layanan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/addlayanan.jpg" width="200"><br>Tambah Data Layanan</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/datatambahan.jpg" width="200"><br>Data Layanan Tambahan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/edittambahan.jpg" width="200"><br>Edit Data Layanan Tambahan</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/addtambahan.jpg" width="200"><br>Tambah Data Layanan Tambahan</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/datapegawai.jpg" width="200"><br>Data Pegawai</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/detailpegawai.jpg" width="200"><br>Detail Data Pegawai</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/hapuspegawai.jpg.jpg" width="200"><br>Hapus Data Pegawai</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/editpegawai.jpg" width="200"><br>Edit Data Pegawai</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/tambahpegawai.jpg" width="200"><br>Tambah Data Pegawai</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/datacabang.jpg" width="200"><br>Data Cabang</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/editcabang.jpg" width="200"><br>Edit Data Cabang</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/addcabang.jpg" width="200"><br>Tambah Data Cabang</td>
+  </tr>
 </table>
-
-<div class="gallery">
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/beranda.jpg?raw=true" alt="Beranda">
-    <figcaption>Beranda</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun1.jpg?raw=true" alt="Akun 1">
-    <figcaption>Profile</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun2.jpg?raw=true" alt="Akun 2">
-    <figcaption>Informasi Pengguna</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun3.jpg?raw=true" alt="Akun 3">
-    <figcaption>Edit Data Pengguna</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun4.jpg?raw=true" alt="Akun 4">
-    <figcaption>Logout Akun</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi1.jpg?raw=true" alt="Transaksi 1">
-    <figcaption>Transaksi </figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi2.jpg?raw=true" alt="Transaksi 2">
-    <figcaption>Konfirmasi Data Transaksi</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi3.jpg?raw=true" alt="Transaksi 3">
-    <figcaption>Metode Pembayaran</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/transaksi4.jpg?raw=true" alt="Transaksi 4">
-    <figcaption>Nota Transaksi</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/datapelanggan.jpg?raw=true" alt="Data Pelanggan">
-    <figcaption>Data Pelanggan</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/detailpelanggan.jpg?raw=true" alt="Detail Pelanggan">
-    <figcaption>Detail Pelanggan</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/hapuspelanggan.jpg?raw=true" alt="Hapus Pelanggan">
-    <figcaption>Hapus Pelanggan</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/tambahpelanggan.jpg?raw=true" alt="Tambah Pelanggan">
-    <figcaption>Tambah Pelanggan</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/editpelanggan.jpg?raw=true" alt="Edit Pelanggan">
-    <figcaption>Edit Pelanggan</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/laporan.jpg?raw=true" alt="Laporan">
-    <figcaption>Data Laporan</figcaption>
-  </figure>
-  <figure>
-    <img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/laporan2.jpg?raw=true" alt="Laporan 2">
-    <figcaption>Pembayaran Transaksi di Laporan</figcaption>
-  </figure>
-</div>
