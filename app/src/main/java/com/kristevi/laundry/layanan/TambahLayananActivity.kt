@@ -72,14 +72,14 @@ class TambahLayananActivity : AppCompatActivity() {
         ethargaaddlayanan.setText(harga)
         etcabangaddlayanan.setText(cabang)
         if (!tvjuduladdlayanan.text.equals(this.getString(R.string.tvjuduladdlayanan))) {
-            if (judul.equals("Edit Layanan")) {
+            if (judul == getString(R.string.tveditlayanan)) {
                 mati()
-                buttonaddlayanan.text = "Sunting"
+                buttonaddlayanan.text = this.getString(R.string.sunting)
             }
         } else {
             hidup()
             etaddLayanan.requestFocus()
-            buttonaddlayanan.text = "Simpan"
+            buttonaddlayanan.text = this.getString(R.string.simpan)
         }
     }
 
@@ -108,10 +108,10 @@ class TambahLayananActivity : AppCompatActivity() {
         updateData["hargaLayanan"] = data.hargaLayanan.toString()
         updateData["cabangLayanan"] = data.cabangLayanan.toString()
         layananRef.updateChildren(updateData).addOnSuccessListener {
-            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.Data_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
             finish()
         }.addOnFailureListener {
-            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.Data_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -158,13 +158,13 @@ class TambahLayananActivity : AppCompatActivity() {
             etcabangaddlayanan.requestFocus()
             return
         }
-        if (buttonaddlayanan.text.equals("Simpan")) {
+        if (buttonaddlayanan.text.equals(this.getString(R.string.simpan))) {
             simpan()
-        } else if (buttonaddlayanan.text.equals("Sunting")) {
+        } else if (buttonaddlayanan.text.equals(this.getString(R.string.sunting))) {
             hidup()
             etaddLayanan.requestFocus()
-            buttonaddlayanan.text = "Perbarui"
-        } else if (buttonaddlayanan.text.equals("Perbarui")) {
+            buttonaddlayanan.text = this.getString(R.string.perbarui)
+        } else if (buttonaddlayanan.text.equals(this.getString(R.string.perbarui))) {
             update()
         }
     }

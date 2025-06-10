@@ -78,14 +78,14 @@ class TambahCabangActivity : AppCompatActivity() {
         etTeleponaddcabang.setText(nohp)
         etLayananaddcabang.setText(layanan)
         if (!tvjuduladdcabang.text.equals(this.getString(R.string.tvjuduladdcabang))) {
-            if (judul.equals("Edit Cabang")) {
+            if (judul == getString(R.string.tveditcabang)) {
                 mati()
-                buttonaddcabang.text = "Sunting"
+                buttonaddcabang.text = getString(R.string.sunting)
             }
         } else {
             hidup()
             etaddCabang.requestFocus()
-            buttonaddcabang.text = "Simpan"
+            buttonaddcabang.text = getString(R.string.simpan)
         }
     }
 
@@ -118,10 +118,10 @@ class TambahCabangActivity : AppCompatActivity() {
         updateData["noHPCabang"] = data.noHPCabang.toString()
         updateData["layananCabang"] = data.layananCabang.toString()
         cabangRef.updateChildren(updateData).addOnSuccessListener {
-            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.Data_Berhasil_Diperbarui),Toast.LENGTH_SHORT).show()
             finish()
         }.addOnFailureListener {
-            Toast.makeText(this, this.getString(R.string.Data_Pegawai_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.Data_Gagal_Diperbarui),Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -175,13 +175,13 @@ class TambahCabangActivity : AppCompatActivity() {
             etLayananaddcabang.requestFocus()
             return
         }
-        if (buttonaddcabang.text.equals("Simpan")) {
+        if (buttonaddcabang.text.equals(getString(R.string.simpan))) {
             simpan()
-        } else if (buttonaddcabang.text.equals("Sunting")) {
+        } else if (buttonaddcabang.text.equals(getString(R.string.sunting))) {
             hidup()
             etaddCabang.requestFocus()
-            buttonaddcabang.text = "Perbarui"
-        } else if (buttonaddcabang.text.equals("Perbarui")) {
+            buttonaddcabang.text = getString(R.string.perbarui)
+        } else if (buttonaddcabang.text.equals(getString(R.string.perbarui))) {
             update()
         }
     }

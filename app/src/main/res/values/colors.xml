@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color> <!-- Merah -->
+    <color name="green">#4CAF50</color> <!-- Hijau -->
+    <color name="blue">#2196F3</color> <!-- Biru -->
+    <color name="orange">#F36E21</color> <!-- Biru -->
 </resources>

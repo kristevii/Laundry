@@ -54,19 +54,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/garis"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ᴿᴾ."
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tvjmlestimasi"
-                app:layout_constraintBottom_toTopOf="@+id/garis"/>
-            <TextView
                 android:id="@+id/tvjmlestimasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="140.000,-"
+                android:text="0"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"

@@ -6,12 +6,11 @@
 
     <ImageView
         android:layout_width="450dp"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
         android:src="@drawable/bg_login"
         android:alpha="0.50"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,16 +33,16 @@
                 android:id="@+id/tvsapalogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selamat Datang"
+                android:text="@string/tvsapalogin"
                 android:textStyle="bold"
                 android:textSize="26dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="130dp"/>
+                android:layout_marginTop="20dp"/>
             <TextView
                 android:id="@+id/tvdesclogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Silahkan login untuk melanjutkan"
+                android:text="@string/tvdesclogin"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginStart="20dp"/>
@@ -51,12 +50,14 @@
         <LinearLayout
             android:layout_width="450dp"
             android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="30dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tvnohplogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nomor Handphone"
+                android:text="@string/tvnohplogin"
                 android:textSize="16sp"
                 android:layout_marginTop="50dp"/>
             <EditText
@@ -64,15 +65,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/radius"
-                android:hint="Masukan Nomor Handphone"
-                android:inputType="none"
+                android:hint="@string/etnohplogin"
+                android:inputType="number"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"/>
             <TextView
                 android:id="@+id/tvpasswordlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Password"
+                android:text="@string/tvpasswordlogin"
                 android:textSize="16sp"
                 android:layout_marginTop="10dp"/>
             <EditText
@@ -80,16 +81,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/radius"
-                android:hint="Masukan Password"
-                android:inputType="none"
+                android:hint="@string/etpasswordlogin"
+                android:inputType="textPassword"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"/>
             <Button
                 android:id="@+id/buttonlogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
+                android:text="@string/buttonlogin"
                 android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:backgroundTint="#254D70"/>
+            <TextView
+                android:id="@+id/tvregisterlogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#7B9BEB"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
                 android:layout_marginTop="10dp"/>
         </LinearLayout>
     </LinearLayout>

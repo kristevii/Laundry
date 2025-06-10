@@ -2,71 +2,89 @@ package com.kristevi.laundry.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.google.firebase.database.DatabaseReference
-import com.kristevi.laundry.R
-import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.FirebaseDatabase
+import com.kristevi.laundry.R
 import com.kristevi.laundry.ModelData.ModelPegawai
 import com.kristevi.laundry.pegawai.TambahPegawaiActivity
 
 class DataPegawaiAdapter(private val listpegawai: ArrayList<ModelPegawai>) :
     RecyclerView.Adapter<DataPegawaiAdapter.ViewHolder>() {
 
-    lateinit var appContext : Context
-    lateinit var databaseReference: DatabaseReference
+    private lateinit var appContext: Context
+    private lateinit var databaseReference: DatabaseReference
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_data_pegawaii, parent, false)
         appContext = parent.context
+        databaseReference = FirebaseDatabase.getInstance().getReference("pegawai")
+        databaseReference = FirebaseDatabase.getInstance().getReference("users")
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listpegawai[position]
-        databaseReference = FirebaseDatabase.getInstance().getReference("pegawai")
 
-
-        holder.tvCardPegawaiId.text = "ID Pegawai  : ${item.idPegawai}"
+        holder.tvCardPegawaiId.text = appContext.getString(R.string.idpegawai, item.idPegawai)
         holder.tvnamapegawai.text = item.namaPegawai
-        holder.tvalamatpegawai.text = "Alamat  : ${item.alamatPegawai}"
-        holder.tvnohppegawai.text = "Telepon  : ${item.noHPPegawai}"
-        holder.tvcabangpegawai.text = "Cabang  : ${item.cabangPegawai}"
+        holder.tvalamatpegawai.text = appContext.getString(R.string.alamat, item.alamatPegawai)
+        holder.tvnohppegawai.text = appContext.getString(R.string.telepon, item.noHPPegawai)
+        holder.tvcabangpegawai.text = appContext.getString(R.string.cabang, item.cabangPegawai)
         holder.tvterdaftarpegawai.text = item.terdaftar
-        holder.cardpegawai.setOnClickListener {
-            val intent = Intent(appContext, TambahPegawaiActivity::class.java)
-            intent.putExtra("judul",  "Edit Pegawai")
-            intent.putExtra("idPegawai", item.idPegawai)
-            intent.putExtra("namaPegawai", item.namaPegawai)
-            intent.putExtra("noHPPegawai", item.noHPPegawai)
-            intent.putExtra("alamatPegawai", item.alamatPegawai)
-            intent.putExtra("cabangPegawai", item.cabangPegawai)
-            appContext.startActivity(intent)
-        }
         holder.btHubungipegawai.setOnClickListener {
+            val rawNumber = item.noHPPegawai?.trim() ?: ""
+            // Format nomor HP ke format internasional (62)
+            val nomorHP = when {
+                rawNumber.startsWith("0") -> rawNumber.replaceFirst("0", "62")
+                rawNumber.startsWith("+62") -> rawNumber.replace("+62", "62")
+                else -> rawNumber
+            }
+            val pesan = appContext.getString(R.string.whatsapp_message, item.namaPegawai)
+            val url = "https://wa.me/$nomorHP?text=${Uri.encode(pesan)}"
+
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+                setPackage("com.whatsapp")
+            }
+            val isWhatsappInstalled = try {
+                appContext.packageManager.getPackageInfo("com.whatsapp", 0)
+                true
+            } catch (e: PackageManager.NameNotFoundException) {
+                false
+            }
+
+            if (isWhatsappInstalled) {
+                appContext.startActivity(intent)
+            } else {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                appContext.startActivity(browserIntent)
+                Toast.makeText(appContext, R.string.whatsapp_not_installed, Toast.LENGTH_SHORT).show()
+            }
         }
+
+
+
         holder.btLihatpegawai.setOnClickListener {
-            val dialogView = LayoutInflater.from(appContext).inflate(R.layout.dialog_mod_pegawai, null)
+            val dialogView = LayoutInflater.from(appContext)
+                .inflate(R.layout.dialog_mod_pegawai, null)
 
-            val dialogBuilder = AlertDialog.Builder(appContext).setView(dialogView)
+            val alertDialog = AlertDialog.Builder(appContext)
+                .setView(dialogView)
+                .create()
 
-            val alertDialog = dialogBuilder.create()
             alertDialog.show()
 
-            // Ambil elemen dari layout dialog
             val tvisiidpegawai = dialogView.findViewById<TextView>(R.id.tvisiidpegawai)
             val tvisinamapegawai = dialogView.findViewById<TextView>(R.id.tvisinamapegawai)
             val tvisialamatpegawai = dialogView.findViewById<TextView>(R.id.tvisialamatpegawai)
@@ -76,7 +94,7 @@ class DataPegawaiAdapter(private val listpegawai: ArrayList<ModelPegawai>) :
             val buttonsuntingpegawai = dialogView.findViewById<Button>(R.id.buttonsuntingpegawai)
             val buttonhapuspegawai = dialogView.findViewById<Button>(R.id.buttonhapuspegawai)
 
-            // Set data ke dalam dialog
+            // Set data
             tvisiidpegawai.text = item.idPegawai
             tvisinamapegawai.text = item.namaPegawai
             tvisialamatpegawai.text = item.alamatPegawai
@@ -84,58 +102,50 @@ class DataPegawaiAdapter(private val listpegawai: ArrayList<ModelPegawai>) :
             tvisicabangpegawai.text = item.cabangPegawai
             tvisiterdaftarpegawai.text = item.terdaftar
 
-            // Tombol "Sunting" membuka halaman Edit Pegawai
             buttonsuntingpegawai.setOnClickListener {
-                val intent = Intent(appContext, TambahPegawaiActivity::class.java)
-                intent.putExtra("judul", "Edit Pegawai")
-                intent.putExtra("idPegawai", item.idPegawai)
-                intent.putExtra("namaPegawai", item.namaPegawai)
-                intent.putExtra("noHPPegawai", item.noHPPegawai)
-                intent.putExtra("alamatPegawai", item.alamatPegawai)
-                intent.putExtra("cabangPegawai", item.cabangPegawai)
+                val intent = Intent(appContext, TambahPegawaiActivity::class.java).apply {
+                    putExtra("judul", appContext.getString(R.string.tvjuduleditpegawai))
+                    putExtra("idPegawai", item.idPegawai)
+                    putExtra("namaPegawai", item.namaPegawai)
+                    putExtra("noHPPegawai", item.noHPPegawai)
+                    putExtra("alamatPegawai", item.alamatPegawai)
+                    putExtra("cabangPegawai", item.cabangPegawai)
+                }
                 appContext.startActivity(intent)
-                alertDialog.dismiss() // Tutup dialog setelah klik
+                alertDialog.dismiss()
             }
 
-            // Tombol "Hapus" untuk menghapus pegawai (bisa ditambahkan logika Firebase)
             buttonhapuspegawai.setOnClickListener {
-                // Contoh: Konfirmasi sebelum menghapus
                 AlertDialog.Builder(holder.itemView.context)
-                    .setTitle("Konfirmasi")
-                    .setMessage("Apakah Anda yakin ingin menghapus pegawai ini?")
-                    .setPositiveButton("Hapus") { _, _ ->
+                    .setTitle(R.string.title_confirm_delete)
+                    .setMessage(R.string.message_confirm_delete)
+                    .setPositiveButton(R.string.button_delete) { _, _ ->
                         val idPegawai = item.idPegawai
-
-                        // Pastikan ID Pegawai tidak null atau kosong
                         if (idPegawai.isNullOrEmpty()) {
-                            Toast.makeText(holder.itemView.context, "ID Pegawai tidak valid!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(holder.itemView.context, R.string.invalid_id, Toast.LENGTH_SHORT).show()
                             return@setPositiveButton
                         }
 
-                        // Inisialisasi database jika belum dilakukan
-                        databaseReference = FirebaseDatabase.getInstance().getReference("pegawai")
-
-                        // Hapus data dari Firebase berdasarkan ID
                         databaseReference.child(idPegawai).removeValue()
                             .addOnSuccessListener {
-                                Toast.makeText(holder.itemView.context, "Data berhasil dihapus", Toast.LENGTH_SHORT).show()
-                                listpegawai.removeAt(position) // Hapus dari list lokal
-                                notifyItemRemoved(position) // Perbarui tampilan RecyclerView
-                                alertDialog.dismiss() // Tutup dialog
+                                Toast.makeText(holder.itemView.context, R.string.delete_success, Toast.LENGTH_SHORT).show()
+                                if (position != RecyclerView.NO_POSITION && position < listpegawai.size) {
+                                    listpegawai.removeAt(position)
+                                    notifyItemRemoved(position)
+                                }
+                                alertDialog.dismiss()
                             }
                             .addOnFailureListener { e ->
                                 Toast.makeText(holder.itemView.context, "Gagal menghapus: ${e.message}", Toast.LENGTH_SHORT).show()
                             }
                     }
-                    .setNegativeButton("Batal", null)
+                    .setNegativeButton(R.string.button_cancel, null)
                     .show()
             }
         }
     }
 
-    override fun getItemCount(): Int {
-        return listpegawai.size
-    }
+    override fun getItemCount(): Int = listpegawai.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cardpegawai: CardView = itemView.findViewById(R.id.cardpegawai)
