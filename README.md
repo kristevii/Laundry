@@ -1,20 +1,18 @@
-<style>
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 880px;
-    margin: auto;
-  }
-  .gallery figure {
-    text-align: center;
-    margin: 0;
-  }
-  .gallery img {
-    width: 200px;
-    height: auto;
-  }
-</style>
+<table>
+  <tr>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/beranda.jpg" width="200"><br>Beranda</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun1.jpg" width="200"><br>Profile</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun2.jpg" width="200"><br>Informasi Pengguna</td>
+    <td><img src="https://github.com/kristevii/Laundry/blob/master/app/src/main/res/drawable/akun3.jpg" width="200"><br>Edit Data Pengguna</td>
+  </tr>
+  <tr>
+    <td><img src="URL5" width="200"><br>Caption 5</td>
+    <td><img src="URL6" width="200"><br>Caption 6</td>
+    <td><img src="URL7" width="200"><br>Caption 7</td>
+    <td><img src="URL8" width="200"><br>Caption 8</td>
+  </tr>
+  <!-- Tambah baris lagi jika perlu -->
+</table>
 
 <div class="gallery">
   <figure>
