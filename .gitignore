@@ -13,5 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-# Ignore google-services.json (Firebase credentials)
-**/google-services.json
+app/google-services.json
