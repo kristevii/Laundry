@@ -3,14 +3,15 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    max-width: 880px;
+    margin: auto;
   }
   .gallery figure {
     text-align: center;
     margin: 0;
   }
   .gallery img {
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
     height: auto;
   }
 </style>
