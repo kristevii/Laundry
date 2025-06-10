@@ -20,8 +20,6 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var etcabangregister: EditText
     private lateinit var sproleregister: Spinner
     private lateinit var buttonregister: Button
-    private lateinit var tvloginregister: TextView
-
     private lateinit var database: FirebaseDatabase
     private lateinit var usersRef: DatabaseReference
 
@@ -40,13 +38,6 @@ class RegisterActivity : AppCompatActivity() {
         etcabangregister = findViewById(R.id.etcabangregister)
         sproleregister = findViewById(R.id.sproleregister) // Make sure you have this Spinner in your layout
         buttonregister = findViewById(R.id.buttonregister)
-        tvloginregister = findViewById(R.id.tvloginregister)
-
-        // Go to login page
-        tvloginregister.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
 
         // Register button click
         buttonregister.setOnClickListener {

@@ -129,16 +129,6 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:backgroundTint="#254D70"/>
-        <TextView
-            android:id="@+id/tvloginregister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/tvloginregister"
-            android:textColor="#7B9BEB"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
