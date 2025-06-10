@@ -196,7 +196,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/akun2" />
+                android:src="@drawable/akunnn" />
             <TextView
                 android:id="@+id/tvcard2dash"
                 android:layout_width="match_parent"
@@ -227,7 +227,7 @@
                 android:id="@+id/img5dash"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:src="@drawable/layanan"
+                android:src="@drawable/layanann"
                 android:layout_marginTop="15dp"/>
             <TextView
                 android:id="@+id/tvcard3dash"
@@ -291,7 +291,7 @@
                 android:id="@+id/img7dash"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:src="@drawable/pegawai"
+                android:src="@drawable/pegawaii"
                 android:layout_marginTop="10dp"/>
             <TextView
                 android:id="@+id/tvcard5dash"
